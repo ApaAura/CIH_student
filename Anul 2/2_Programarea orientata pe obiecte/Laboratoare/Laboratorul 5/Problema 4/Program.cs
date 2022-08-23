@@ -1,0 +1,12 @@
+﻿using Problema_4;
+Elev elev=new Elev();
+elev.CitireDate();
+Profesor profesor = new Profesor();
+profesor.CitireDate();
+AngajatAuxiliar angajatAuxiliar = new AngajatAuxiliar();
+angajatAuxiliar.CitireDate();
+Console.Clear();
+elev.AfisareDate();
+profesor.AfisareDate();
+angajatAuxiliar.AfisareDate();
+Console.ReadKey();
