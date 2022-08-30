@@ -1,0 +1,11 @@
+﻿using Problema_2;
+Fractie fractiaMea = new Fractie();
+fractiaMea.Citire();
+Fractie fractiaTa=new Fractie();
+fractiaTa.Citire();
+Console.Clear();
+Console.WriteLine($"{fractiaMea.ToString()} + {fractiaTa.ToString()} = {(fractiaMea+fractiaTa).ToString()}");
+Console.WriteLine($"{fractiaMea.ToString()} * {fractiaTa.ToString()} = {(fractiaMea * fractiaTa).ToString()}");
+Console.WriteLine($"{fractiaMea.ToString()} / {fractiaTa.ToString()} = {(fractiaMea / fractiaTa).ToString()}");
+Console.Write($"{fractiaMea.ToString()}-- = "); fractiaMea--; Console.WriteLine($"{fractiaMea.ToString()}");
+Console.Write($"{fractiaTa.ToString()}++ = "); fractiaTa++; Console.WriteLine($"{fractiaTa.ToString()}");
