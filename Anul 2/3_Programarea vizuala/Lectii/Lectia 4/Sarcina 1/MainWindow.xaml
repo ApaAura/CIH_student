@@ -1,0 +1,52 @@
+﻿<Window x:Class="Sarcina_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sarcina_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Margin="20" Background="AliceBlue">
+        <Label Content="Selectati figura : " FontSize="20" Width="200"/>
+        <ComboBox Name="Figuri" Margin="10" Width="400"
+                  VerticalAlignment="Top" FontSize="20" SelectionChanged="Figuri_SelectionChanged" >
+            <ComboBoxItem Content="Cerc"/>
+            <ComboBoxItem Content="Paralelogram"/>
+        </ComboBox>
+        <Button x:Name="BtnCalc" Content="Calculeaza" Click="Button_Click" IsEnabled="False" Margin="10"/>
+        <StackPanel x:Name="CircleData" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Raza:" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="CercRaza" Grid.Row="0" Grid.Column="1" Margin="3"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel x:Name="ParalelogramData" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Baza:" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="ParBaza" Grid.Row="0" Grid.Column="1" Margin="3"/>
+                <Label Content="Latura laterala:" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="ParLatura" Grid.Row="1" Grid.Column="1" Margin="3"/>
+                <Label Content="Inaltimea:" Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center"/>
+                <TextBox x:Name="ParInaltime" Grid.Row="2" Grid.Column="1" Margin="3"/>
+            </Grid>
+        </StackPanel>
+        <Label x:Name="Perim" Content="Perimetru:" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="15"/>
+        <Label x:Name="Aria" Content="Aria:" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="15"/>
+    </StackPanel>
+</Window>

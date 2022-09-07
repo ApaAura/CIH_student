@@ -1,0 +1,57 @@
+﻿<Window x:Class="Problema_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Problema_5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem x:Name="programTab">
+                <TabItem.Header>
+                    <TextBlock>
+                        Limbaje de programare
+                    </TextBlock>
+                </TabItem.Header>
+
+                <TabItem.Content>
+                    <StackPanel>
+                        <RadioButton>
+                            Limbajul C#
+                        </RadioButton>
+                        <RadioButton>
+                            Limbajul Java
+                        </RadioButton>
+                        <RadioButton>
+                            Limbajul C++
+                        </RadioButton>
+                        <RadioButton>
+                            Limbajul Python
+                        </RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="markupTab">
+                <TabItem.Header>
+                    <TextBlock>
+                        Limbaje de marcare
+                    </TextBlock>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <RadioButton>
+                            Limbajul HTML
+                        </RadioButton>
+                        <RadioButton>
+                            Limbajul XAML
+                        </RadioButton>
+                        <RadioButton>
+                            Limbajul XML
+                        </RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
