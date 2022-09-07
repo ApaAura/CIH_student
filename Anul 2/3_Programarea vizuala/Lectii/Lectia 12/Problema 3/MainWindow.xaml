@@ -1,0 +1,17 @@
+﻿<Window x:Class="Problema_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Problema_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Horizontal">
+
+        <TextBlock Background="#FFCCCCCC" Padding="10" Margin ="10">TextBlock 1</TextBlock>
+        <TextBlock Background="#FF97B5BD" Padding="10" Margin="10">TextB lock 2</TextBlock>
+        <TextBlock Background="#FF75B6C7" Padding="10" Margin="10">TextB lock 3</TextBlock>
+        <TextBlock Background="#FF435A79" Padding="10" Margin="10"> TextBlock 4</TextBlock>
+        <TextBlock Background="LightCoral" Padding="10" Margin="10">Text Block 5</TextBlock>
+    </StackPanel>
+</Window>
