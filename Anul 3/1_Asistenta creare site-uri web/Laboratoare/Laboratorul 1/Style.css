@@ -1,0 +1,31 @@
+p {
+    width:500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.title{
+    text-align: center;
+    color: blue;
+}
+.author{
+    text-align: right;
+    font-style: italic;
+}
+.first{
+    text-align: left;
+    color: red;
+}
+.second{
+    text-align: center;
+    color: yellow;
+}
+.third{
+    text-align: right;
+    color: aqua;
+}
+.forth{
+    text-align: left;
+}
+.sixth{
+text-align: right;
+}

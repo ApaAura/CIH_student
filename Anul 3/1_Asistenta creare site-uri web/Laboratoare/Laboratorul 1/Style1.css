@@ -1,0 +1,21 @@
+div {
+    margin: 0 auto;
+    width: 800px;
+    border: 1px solid gray;
+    padding: 8px;
+  }
+  h1 {
+    text-align: center;
+    color: #4CAF50;
+  }
+  p {
+    text-indent: 50px;
+    text-align: justify;
+  }
+  a {
+    text-decoration: none;
+    color: #008CBA;
+  }
+  h3{
+    text-align: center;
+  }
