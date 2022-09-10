@@ -1,0 +1,67 @@
+p{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+h1{
+    text-align: center;
+    color: #ffffff; 
+}
+.autor{
+    text-align: center;
+    margin: 0 auto;
+    color: #5f94b2;
+    font-size: large;
+}
+.unu{
+    text-align: left;
+    color: #216278;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.doi{
+    color: #ea9598;
+}
+.trei{
+    text-align: right;
+    color: #bed4e9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cinci{
+    text-align: left;
+    color: #f4cbc7;
+}
+.sase{
+    color: #216278;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sapte{
+    text-align: right;
+    color: #ea9598;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.opt{
+    color: #bed4e9;
+    text-shadow: #5f94b2;
+}
+.noua{
+    text-align: left;
+    color: #216278;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.zece{
+    color: #f4cbc7;
+    font-style: oblique;
+}
+.unsprezece{
+    font-stretch: expanded;
+    font-size:x-small;
+    text-align:right ;
+    color: #bed4e9;
+}
+.all{
+    color: #87a5c1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: center;
+}
