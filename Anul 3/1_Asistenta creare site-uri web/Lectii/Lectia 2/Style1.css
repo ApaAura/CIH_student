@@ -1,0 +1,11 @@
+.sign{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.ref{
+    text-align: center;
+    color: red;
+    font-size: 20 px;
+    font-weight: bold;
+}
