@@ -1,0 +1,92 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #3aafa9;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: #3aafa9;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #3aafa9;
+    color: white;
+  }
+  .header{
+    text-align: center;
+    margin-bottom: 1px;
+    margin-top: 1px;
+  }
+  .line{
+    background-color: #3aafa9;
+    width: 60%;
+    height: 2px;
+  }
+  .titluexamen{
+    color: #20625f;
+    font-size: 35px;
+    margin-left: 7%;
+  }
+  .list1{
+    font-size: 25px;
+    color: #2c8884;
+    font-weight: bold;
+    margin-left: 10%;
+  }
+  .list2{
+    color: #154745;
+  }
+  .list3{
+    color: black;
+    font-size: 20px;
+  }
+  .list4{
+    font-style: italic;
+  }
+  .listatermeni{
+    color: #154745;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 20px;
+  }
+  .titludiscipline{
+    color: #20625f;
+    font-size: 25px;
+    margin-left: 10%;
+  }
+  .discipline{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: #2c8884;
+    margin-left: 10%;
+  }
+  .flori{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    font-weight: bold;
+    color: #2c8884;
+    margin-left: 10%;
+  }
+  .calitati{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: #2c8884;
+    margin-left: 10%;
+  }
+  
+
+
