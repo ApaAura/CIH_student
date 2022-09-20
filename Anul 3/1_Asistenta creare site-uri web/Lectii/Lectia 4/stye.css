@@ -1,0 +1,19 @@
+p{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  td, th {
+    border: 2px solid #1a1a1a;
+    text-align: left;
+    padding: 8px;
+  }
+
