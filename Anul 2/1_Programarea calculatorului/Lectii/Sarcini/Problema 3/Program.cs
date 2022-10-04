@@ -6,43 +6,41 @@ c) diferenţa mulţimilor A şi B;
 Mulţimile A şi B sunt formate din literele mari ale alfabetului latin.
  */
 
-HashSet<int> numere=new HashSet<int>();
-HashSet<int> numere1 = new HashSet<int>();
+HashSet<string> sir=new HashSet<string>();
+HashSet<string> sirA = new HashSet<string>();
 
-Console.WriteLine("Introduceti numarul de elemente al multimii A: ");
-int nr=int.Parse(Console.ReadLine());
-Console.WriteLine($"Introduceti {nr} elemente:");
-for (int i = 0; i < nr; i++)
+Console.WriteLine("Introduceti multimea A: ");
+string linie = Console.ReadLine();
+string[] cuvinte = linie.Split(' ', ',');
+foreach (string element in cuvinte)
 {
-    int element = int.Parse(Console.ReadLine());
-    numere.Add(element);
+    sir.Add(element);
 }
 
-Console.WriteLine("Introduceti numarul de elemente al multimii B: ");
-int nr1=int.Parse(Console.ReadLine());
-Console.WriteLine($"Introduceti {nr} elemente:");
-for (int i = 0; i < nr1; i++)
+Console.WriteLine("Introduceti multimea B: ");
+string linie1 = Console.ReadLine();
+string[] cuvinte1 = linie.Split(' ', ',');
+foreach (string element in cuvinte)
 {
-    int element1 = int.Parse(Console.ReadLine());
-    numere.Add(element1);
+    sirA.Add(element);
 }
 
 Console.Clear();
-HashSet<int> A1 = numere.ToHashSet<int>();
-HashSet<int> A2 = numere.ToHashSet<int>();
-HashSet<int> A3 = numere.ToHashSet<int>();
+HashSet<string> A1 = sir.ToHashSet<string>();
+HashSet<string> A2 = sir.ToHashSet<string>();
+HashSet<string> A3 = sir.ToHashSet<string>();
 
 Console.WriteLine("Reuniunea: ");
-A1.UnionWith(numere1);
-foreach (int item in A1)
+A1.UnionWith(sirA);
+foreach (string item in A1)
 { Console.WriteLine(item);}
 
 Console.WriteLine("Intersectia: ");
-A2.IntersectWith(numere1);
-foreach (int item in A2)
+A2.IntersectWith(sirA);
+foreach (string item in A2)
 { Console.WriteLine(item); }
 
 Console.WriteLine("Diferenta: ");
-A3.ExceptWith(numere1);
-foreach (int item in A3)
+A3.ExceptWith(sirA);
+foreach (string item in A3)
 { Console.WriteLine(item); }
