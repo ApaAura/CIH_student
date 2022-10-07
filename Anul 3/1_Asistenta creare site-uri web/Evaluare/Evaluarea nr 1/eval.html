@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="post" action="prelucrare.php">
+        <table>
+            <tr>
+                <th colspan="2">Numele: </th>
+                <td colspan="2"><input type="text" placeholder="Numele"></td>
+            </tr>
+            <tr>
+                <th colspan="2">Prenumele:</th>
+                <td colspan="2"><input type="text" placeholder="Prenumele"></td>
+            </tr>
+            <tr>
+                <th>Grupa</th>
+                <td>
+                    <select>
+                        <option>AAW</option>
+                        <option>PAPP</option>
+                        <option>C</option>
+                        <option>E</option>
+                    </select>
+                </td>
+                <th>Seria</th>
+                <td>
+                    <select>
+                        <option>1941</option>
+                         <option>2031</option>
+                         <option>2121</option>
+                         <option>2211</option>
+                     </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><hr></td>
+            </tr>
+            <tr>
+                <th colspan="2">Curs optional 1</th>
+                <td colspan="2">
+                    <input type="radio" name="curs1" checked>
+                    <label for="curs1">Software pentru birotica</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <input type="radio" name="curs1">
+                    <label for="curs1">Grafica inginereasca</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><hr></td>
+            </tr>
+            <tr>
+                <th colspan="2">Curs optional 2</th>
+                <td colspan="2">
+                    <input type="radio" name="curs2" checked>
+                    <label for="curs1">Filozofie</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <input type="radio" name="curs2">
+                    <label for="curs1">Sociologie</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <input type="radio" name="curs2">
+                    <label for="curs1">Psihologie</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <input type="radio" name="curs2">
+                    <label for="curs1">Comunicare</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <input type="radio" name="curs2">
+                    <label for="curs1">Cultura si civilizatia europeana</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <input type="radio" name="curs2">
+                    <label for="curs1">Institutiile politice si administrative europene</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <input type="radio" name="curs2">
+                    <label for="curs1">Integrare europeana</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><hr></td>
+            </tr>
+            <tr>
+                <th>Curs facultativ</th>
+                <td colspan="3">
+                    <input type="checkbox" name="curs3">
+                    <label for="curs3">Servicii Internet</label>
+                    <input type="checkbox" name="curs3">
+                    <label for="curs3">Limba straina 2</label>
+                    <input type="checkbox" name="curs3">
+                    <label for="curs3">Educatia fizica</label> <br>
+                    <input type="checkbox" name="curs3">
+                    <label for="curs3">Psihologia educatiei</label>
+                    <input type="checkbox" name="curs3">
+                    <label for="curs3">Pedagogie 1</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><hr></td>
+            </tr>
+            <tr>
+                <th colspan="2">Observatii: </th>
+                <td colspan="2"> 
+                    <textarea cols="30" rows="4">Scrieti aici observatiile DVS.</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><hr></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button>Ma inscriu</button>
+                </td>
+                <td colspan="2">
+                    <button>Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
