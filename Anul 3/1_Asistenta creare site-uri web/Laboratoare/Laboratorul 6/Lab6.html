@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="prelucrare.php">
+            <table>
+                <tr>
+                    <td> 
+                        <h2>Datele DVS.</h2>
+                        <p><label>Înregistrați-vă pe site</label></p>
+                        <p>
+                        <input type="radio" name="chestionare" checked>Da
+                        <input type="radio" name="chestionare">Nu
+                        </p>
+                    </td>
+                    <td>
+                        <br>
+                        <br>
+                        <br>
+                        <p>Am un cont</p>
+                        <p><b>Accesați contul Dvs.</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Prenumele" required>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Nume" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="tel" placeholder="Numar de telefon" required>
+                    </td>
+                    <td>
+                        <input type="email" placeholder="Email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" placeholder="Parola" required>
+                    </td>
+                    <td>
+                        <input type="password" placeholder="Confirmati parola" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Oras" required>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Adresa" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <textarea rows="5" cols="59">Comentarii</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button>Înregistrare</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button>Autentificare</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <form action="" class="form2">
+            <table class="table2">
+                <tr>
+                    <td><h2>Modul de achitare</h2></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="plata" checked>
+                        <label for="plata" class="textmare"><b>Achitare online</b></label><br>
+                        <label class="textmic">Visa, Mastercard, American express</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="plata">
+                        <label for="plata" class="textmare"><b>Plata in numerar</b></label><br>
+                        <label class="textmic">plata se percepe la primirea produsului catre curier sau in magazin la adresa str. Bucuresti 14</label> <br>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="plata">
+                        <label for="plata" class="textmare"><b>Plata fara numerar</b></label><br>
+                        <label class="textmic">Pentru persoane juridice</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" name="plata">
+                        <label for="plata" class="textmare"><b>Pe credit</b></label><br></td>
+                </tr>
+                <tr>
+                    <td><h2>Metoda de livrare</h2></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="livrare" checked>
+                        <label for="livrare" class="textmare"><b>Ridicarea din magazin</b></label><br>
+                        <label class="textmic">din magazin la adresa: Chisinau str. Bucuresti 14</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="livrare">
+                        <label for="livrare" class="textmare"><b>Livrare in Chisinau</b></label><br>
+                        <label class="textmic">in functie de tarifele serviciilor de curierat</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="livrare">
+                        <label for="livrare" class="textmare"><b>Livrare in toata Moldova</b></label><br>
+                        <label class="textmic">La cea mai apropiat scrusala, in conformitate cu tarifele serviciului de livrare</label><br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
