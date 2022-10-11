@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main2.css">
+</head>
+<body>
+    <form action="">
+        <h1>Input form</h1>
+        <label for="firstName">First name</label>
+        <input type="text" name="first_name" id="firstName" placeholder="Name">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <label for="subject">Subject</label>
+        <input style="height: 40px;" type="text" name="subject" id="subject" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        <div class="selection">
+            <div class="smallsection">
+                <input type="checkbox" name="products" checked>
+                <label for="products">Milk</label> <br>
+                <input type="checkbox" name="products" >
+                <label for="products">Sugar</label><br>
+                <input type="checkbox" name="products" disabled>
+                <label for="products">Lemon</label>
+            </div>
+            <div  style="margin-left:250px;" class="smallsection">
+                <input type="radio" name="Gen" checked>
+                <label for="gen">Male</label> <br>
+                <input type="radio" name="Gen" >
+                <label for="gen">Female</label> <br>
+                <input type="radio" name="Gen" disabled>
+                <label for="gen">Don't know</label>
+            </div>
+        </div>
+        <button type="submit">Send ></button>
+    </form>
+</body>
+</html>

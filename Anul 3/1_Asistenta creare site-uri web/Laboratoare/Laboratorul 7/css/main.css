@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+p{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.photo{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.galerie > img{
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+}
+.galerie {
+    width: calc(25% - 20px);
+    float: left;
+    margin: 10px;
+    position: relative;
+}
+.text{
+    width: fit-content;
+    padding: 5px 20px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
