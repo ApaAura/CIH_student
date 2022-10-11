@@ -1,0 +1,41 @@
+p{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+table{
+    width: 60%;
+    margin-top:5%;
+    margin-left: 20%;
+}
+input[type=text]{
+    width: 95%;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+  
+ td,th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  button{
+    margin-left: 40%;
+    width: 200px;
+    height: 35px;
+    background-color: cadetblue;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 18px;
+  }
+  select{
+    width: 150px;
+    padding-left: 15px;
+    margin-left: 10px;
+  } 
