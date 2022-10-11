@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: lightgray;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: white;
+    background-color: #009688;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px;
+    margin: 0;
+    font-size: 20px;
+}
+form{
+    width: 800px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+form > input, form > label{
+    margin: 0 25px;
+}
+form > label{
+    color: #009688;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-top: 15px;  
+}
+form > input{
+    background-color: #f1f1f1;
+    padding: 8px;
+    border: 1px solid lightgray;
+}
+button{
+    background-color: #607d8b;
+    color: white;
+    border: 1px solid #607d8b;
+    width: 150px;
+    padding: 10px 25px;
+    margin: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
