@@ -1,0 +1,18 @@
+p {
+    width:500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.gallery{
+    margin: 10%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+.gallery>img{
+    width: 100%;
+}
+.gallery> img:nth-child(7){
+    grid-area:2/2/5/5;
+}
