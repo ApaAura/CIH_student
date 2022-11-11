@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+p{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.container{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.big_table{
+    width: 15%;
+    height: 130px;
+    margin-left: 10%;
+    background-color: #cacbd1;
+}
+th{
+    border: none;
+}
+td{
+    border: 3px solid #0b08ce;
+    font-style: italic;
+}
+.text{
+    text-align: left;
+    width: 80%;
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+}
+.text:hover{
+    color: cornflowerblue;
+    text-decoration-line: underline;
+}
+
