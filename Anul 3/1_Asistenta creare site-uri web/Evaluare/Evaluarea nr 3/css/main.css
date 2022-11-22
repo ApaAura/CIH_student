@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url('/css/fonts/gordita/Gordita\ Medium.otf');
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    font-family: 'Montserrat Bold';
+}
+.navbar{
+    width: 80%;
+    margin-left: 10%;
+}
+.navbar ul{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    display: flex;
+    float: right;
+    padding: 20px;
+}
+.navbar ul a{
+    text-decoration: none;
+    color: white;
+    padding: 30px;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.first-section{
+    height: 1100px;
+}
+.hero-image {
+    background-image: url("../imgs/back.png");
+    height: 950px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.second-section{
+    width: 70%;
+    margin-left: 15%;
+    height: 650px;
+}
+.second-section .title{
+    height: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    color: #585858;
+}
+.catalog-item div{
+    padding: 3px;
+}
+.catalog{
+    display: flex;
+}
+.catalog-photos{
+    position: absolute;
+}
+.catalog-photos img{
+    width: 350px;
+    height: 250px;
+    padding: 20px;
+}
+.catalog-item{
+    text-align: center;
+    width: calc(25% - 20px);
+    min-width: 250px;
+    font-family: 'Times New Roman', Times, serif;
+    height: 250px;
+    padding: 30px;
+    margin-top: 0;
+    margin: 50px;
+    border-radius: 10px;
+    position: relative;
+    top: 140px;
+    background-color: #f6f6f6;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.third-section .title{
+    height: 80px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    color: #585858;
+}
+.third-section{
+    width: 60%;
+    margin-left: 19%;
+    height: 550px;
+}
+.detalii{
+    display: flex;
+}
+.big-photo img{
+    width: 750px;
+    height: 500px;
+}
+.small-photo{
+    display: flex;
+}
+.small-photo img{
+    height: 90px;
+    padding: 5px;
+    padding-left: 0;
+}
+.title-text{
+    font-size: 40px;
+    color: #585858;
+    margin-left: 100px;
+}
+.info{
+    background-color: white;
+    padding: 20px;
+    margin-left: 100px;
+    width: 400px;
+}
+.details{
+    font-size: 15px;
+    margin-left: 15px;
+    display: flex;
+    margin-left: 20px;
+}
+.data{
+    margin-left: 20px;
+}
+@media screen and (min-width:600px){
+  
+}
