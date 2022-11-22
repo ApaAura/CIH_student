@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    overflow-x: hidden;
+    height: 100vh;
+}
+.navbar{
+    padding: 0;
+    margin: 0;
+    width: 250px;
+}
+.navbar li{
+    position: relative;
+}
+.navbar li a{
+    text-align: left;
+    height: 50px;
+    position: relative;
+    display: block;
+    padding: 18px 20px;
+    background-color: #1a1a1c;
+    color: #63d2f2;
+    border-radius: 8px;
+    border: 1.5px solid white;
+}
+.navbar .fa{ 
+    margin-right: 15px;
+    font-size: 20px;
+    color: white;
+}
+.navbar li a strong{
+    display: block;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.navbar li:hover>a{
+    color: #0c7fb0;
+}
+.navbar li ul,
+.navbar li ul li ul{
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms;
+    z-index: 999;
+    left: 280px;
+    top: 0;
+    list-style: none;
+    position: absolute;
+    height: 45px;
+    min-width: 250px;
+    padding: 0;
+    margin: 0;
+}
+.navbar li:hover>ul,
+.navbar li ul li:hover>ul{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    left: 250px;
+}
+.navbar li ul li a{
+    font-size: 15px;
+    letter-spacing: 3px;
+    padding: 10px;
+    text-align: center;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    height: 45px;
+}
+.navbar li ul li ul {
+    left: 230px;
+    top: 0;
+    border: 0;
+}
