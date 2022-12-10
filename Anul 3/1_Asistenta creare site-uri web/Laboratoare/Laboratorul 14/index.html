@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">  
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="speedometer2" viewBox="0 0 16 16">
+      <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+      <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+    </symbol>
+    <symbol id="table" viewBox="0 0 16 16">
+      <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+    </symbol>
+    <symbol id="people-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+    </symbol>
+    <symbol id="collection" viewBox="0 0 16 16">
+      <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+    </symbol>
+  </svg>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom box-shadow">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Portofoliu</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item"> <a class="nav-link" href="#">Acasa</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Despre mine</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">Portofoliu</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Blog</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Laboratoare</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="Laboratorul 1/Laboratorul_1.html">Laboratorul 1</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 2/luceafarul.html">Laboratorul 2</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 2/scrisoare.html">Laboratorul 2.1</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 3/index.html">Laboratorul 3</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 4/Lab.html">Laboratorul 4</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 4/Lab1.html">Laboratorul 4.1</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 5/Index.html">Laboratorul 5</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 6/Lab6.html">Laboratorul 6</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 7/index.html">Laboratorul 7</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 7/index1.html">Laboratorul 7.1</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 7/index2.html">Laboratorul 7.2</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 8/index.html">Laboratorul 8</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 8/index1.html">Laboratorul 8.1</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 8/moldova.html">Laboratorul 8.2</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 9/index.html">Laboratorul 9</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 9/index1.html">Laboratorul 9.1</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 10/index.html">Laboratorul 10</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 10/index1.html">Laboratorul 10.1</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 11/index.html">Laboratorul 11</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 12/index1.html">Laboratorul 12</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 12/index2.html">Laboratorul 12.1</a></li>
+                  <li><a class="dropdown-item" href="Laboratorul 13/index.html">Laboratorul 13</a></li>
+               </ul>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Contacte</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <main>
+      <div class="first-section">
+        <div class="hero-image">
+            <div class="hero-text">
+              <h1 class="text-white">Welcome to my page</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+            </div>
+        </div>
+    </div>
+    <div class="second-section">
+      <div class="photo">
+        <img src="Images/2.jpg">
+      </div>
+      <div class="description">
+        <h3 class="text-black">Sunt o designeră din Cahul care iubește designul curat, simplu și unic. De-asemenea, îmi place să creez identități de marcă, pictograme , site-uri web și lucrări de ilustrare.</h3>
+        <p>Studiez crearea paginilor web în cadrul Colegiului Iulia Hasdeu din Cahul</p>
+      </div>
+    </div>
+    
+    <div style="background-color: #f7f7f7;">
+      <div class="third-section">
+        <div class="container px-4 py-5" id="featured-4">
+          <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+            <div class="feature col">
+              <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
+              </div>
+              <h4 class="fs-2">Mobile apps</h4>
+              <p>Studiez crearea paginilor web în cadrul Colegiului Iulia Hasdeu din Cahul.</p>
+            </div>
+            <div class="feature col">
+              <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#speedometer2"/></svg>
+              </div>
+              <h4 class="fs-2">Analitics</h4>
+              <p>Studiez crearea paginilor web în cadrul Colegiului Iulia Hasdeu din Cahul.</p>
+            </div>
+            <div class="feature col">
+              <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#table"/></svg>
+              </div>
+              <h4 class="fs-2">Photography</h4>
+              <p>Studiez crearea paginilor web în cadrul Colegiului Iulia Hasdeu din Cahul.</p>
+            </div>
+            <div class="feature col">
+              <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+              </div>
+              <h4 class="fs-2">UI/UX Design</h4>
+              <p>Studiez crearea paginilor web în cadrul Colegiului Iulia Hasdeu din Cahul.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="third-section">
+      <div class="text">Portofoliul meu</div>
+      <div class="enum">
+        <p><a href="#">All</a></p>
+        <p><a href="#">App</a></p>
+        <p><a href="#">Card</a></p>
+        <p><a href="#">Web</a></p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <img
+            src="Images/3.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+          />
+      
+          <img
+            src="Images/7.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+          />
+        </div>
+      
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img
+            src="Images/8.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+          />
+      
+          <img height="330px"
+            src="Images/5.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+          />
+        </div>
+      
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img 
+            src="Images/4.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+          />
+      
+          <img height="545px"
+            src="Images/6.jpg"
+            class="w-100 shadow-1-strong rounded mb-4"
+          />
+        </div>
+      </div>
+    </div>
+    
+    <div style="background-color: #f7f7f7;">
+      <div class="third-section" >
+        <div class="text">Journal</div>
+        <div class="album py-5 ">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card border-light">
+                  <img  class="bd-placeholder-img card-img-top" width="100%" height="225" src="Images/9.jpg">
+                  <div class="card-body bg">
+                    <p><b>Journal article title</b></p>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-light">
+                  <img  class="bd-placeholder-img card-img-top" width="100%" height="225" src="Images/9.jpg">
+                  <div class="card-body bg">
+                    <p><b>Journal article title</b></p>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card border-light ">
+                  <img  class="bd-placeholder-img card-img-top" width="100%" height="225" src="Images/9.jpg">
+                  <div class="card-body bg">
+                    <p><b>Journal article title</b></p>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="third-section align">
+      <div class="contact">
+        <br>
+        <h1>Contactati-ma</h1>
+        <p>str Dunarii 36</p>
+        <p>Republica Moldova mun. Cahul</p>
+        <p>+37312345678</p>
+        <p>cihcahul@cihcahul.com</p>
+      </div>
+      <div class="contact">
+        <form>
+          <div>
+            <input type="text" placeholder="Your name">
+            <input type="text" placeholder="Your email">
+          </div>
+          <input style="width: 526px;" type="text" placeholder="Subject">
+          <textarea placeholder="Message"></textarea>
+          <div>
+          <button>Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    </main>
+    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+      <div class="container pt-4">
+        <section class="mb-4">
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            data-mdb-ripple-color="dark"
+            ><i class="fa fa-facebook-f"></i
+          ></a>
+    
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            data-mdb-ripple-color="dark"
+            ><i class="fa fa-google"></i
+          ></a>
+    
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            data-mdb-ripple-color="dark"
+            ><i class="fa fa-instagram"></i
+          ></a>
+    
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            data-mdb-ripple-color="dark"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            data-mdb-ripple-color="dark"
+            ><i class="fa fa-github"></i
+          ></a>
+        </section>
+      </div>
+    
+      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright: <b>Nume Prenume Grupa</b>
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
