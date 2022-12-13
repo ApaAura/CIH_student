@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.logo{
+    padding: 15px;
+    margin-left: 15%;
+}
+.logo-text{
+    margin: 0 5px;
+    padding: 0;
+    font-size: 10px;
+    color: gray;
+}
+.navbar-nav{
+    margin-left: 20%;
+}
+.nav-link{
+    margin-left: 30px;
+}
+.navbar-nav li{
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.buton{
+    margin-left: 40px;
+}
+.buton >button{
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    background: radial-gradient(circle at 10% 20%, rgb(251, 221, 19) 0.1%, rgb(255, 153, 1) 90%);
+}
+.first-section{
+    width: 55%;
+    margin-left: 22%;
+    margin-top: 50px;
+    display: flex;
+}
+.description{
+    margin-top: 40px;
+    text-align: right;
+}
+.title{
+    color: #ffa605;
+}
+.col p a{
+    text-decoration: none;
+}
+.section-title{
+    margin-left: 1%;
+    margin-bottom: 2%;
+}  
+.line{
+    margin-left: 22%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.color{
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border-radius:  0 0 10px 10px;
+    color: white;
+    padding: 5px;
+    top: -5px;
+    height: 60px;
+}
+.coll{
+    padding: 10px;
+}
+.color2{
+    background-color: black;
+    padding: 20px;
+    position: relative;
+    color: white;
+    padding: 5px;
+    top: -60px;
+    height: 60px;
+    width: 380px;
+    opacity: 0.8;
+}
+.little{
+    margin: 0;
+    position: relative;
+    top: -10px;
+    text-align: left;
+    font-size: 14px;
+}
+.align{
+    text-align: left;
+}
+.space{
+    margin-top: 0;
+    width: 55%;
+    margin-left: 22%;
+}
+.tabs{
+    display: flex;
+}
+.tabs div {
+    margin-top: 10px;
+}
+.contact{
+    display: flex;
+    padding: 10px;
+}
+.element{
+    margin: 10px;
+    padding: 10px;
+}
+input[type=text]{
+    width: 250px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+label{
+    margin: 5px;
+    padding: 5px;
+}
+.info{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+textarea{
+    width: 400px;
+    height: 150px;
+}
+.form1{
+    width: 650px;
+}
