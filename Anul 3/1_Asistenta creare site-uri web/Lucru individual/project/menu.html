@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+    <script src="https://kit.fontawesome.com/a9719e28a4.js" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />-->
+
+    <style>
+        .card:hover
+        {
+            border: 1px solid #ce9162;
+        }
+        .card{
+            max-width: 250px;
+        }
+        .nav-menu{
+            background-color: #212529;
+        }
+        .nav-menu-item{
+            margin: 8px;
+            padding: 8px;
+            font-size: 18px;
+            color: #6c757d;
+        }
+        .nav-menu-item:hover{
+            color: white;
+            background-color: #6c757d;
+        }
+        .owl-prev,
+        .owl-next {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            display: block !important;
+            background-color: #111111 !important;
+        }
+        .owl-prev:hover, .owl-next:hover{
+            background-color: #212529 !important;
+        }
+        .owl-prev {
+            left: -45px;
+        }
+        .owl-next {
+            right: -60px;
+        }
+        @media screen and (max-width:900px){
+            .nav-menu{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #111111; color: white;">
+    <div class="container d-flex my-5">
+        <!--Navbar menu section-->
+        <div class="nav-menu col-md-2 mx-4">
+            <div class="">
+                <nav class="nav flex-column text-decoration-none">
+                    <a class="nav-link nav-menu-item" href="#pizza-section"><b>Pizza</b></a>
+                    <a class="nav-link nav-menu-item" href="#felul-section"><b>Felul întâi</b></a>
+                    <a class="nav-link nav-menu-item" href="#dejun-section"><b>Micul dejun</b></a>
+                    <a class="nav-link nav-menu-item" href="#salate-section"><b>Salate</b></a>
+                    <a class="nav-link nav-menu-item" href="#gustari-section"><b>Gustări reci</b></a>
+                    <a class="nav-link nav-menu-item" href="#platou-section"><b>Platouri cu carne</b></a>
+                    <a class="nav-link nav-menu-item" href="#garnituri-section"><b>Garnituri</b></a>
+                    <a class="nav-link nav-menu-item" href="#pui-section"><b>Bucate din pui</b></a>
+                    <a class="nav-link nav-menu-item" href="#porc-section"><b>Bucate din porc</b></a>
+                    <a class="nav-link nav-menu-item" href="#peste-section"><b>Bucate din peste</b></a>
+                    <a class="nav-link nav-menu-item" href="#paste-section"><b>Paste</b></a>
+                    <a class="nav-link nav-menu-item" href="#desert-section"><b>Deserturi</b></a>
+                    <a class="nav-link nav-menu-item" href="#gustari-bere-section"><b>Gustari la bere</b></a>
+                    <a class="nav-link nav-menu-item" href="#ceai-cafea-section"><b>Ceai/Cafea</b></a>
+                    <a class="nav-link nav-menu-item" href="#milkshake-section"><b>Milkshake</b></a>
+                    <a class="nav-link nav-menu-item" href="#bauturi-section"><b>Bauturi răcoritoare</b></a>
+                    <a class="nav-link nav-menu-item" href="#cocktailuri-section"><b>Cocktailuri</b></a>
+                </nav>
+            </div>
+        </div>
+        <!--Menu section-->
+        <div class="px-1 mx-3 col-md-10">
+            <div class="container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div id="pizza-section" class="mt-0 mb-4">
+                    <h2>Pizza</h2>
+                    <hr>
+                </div>
+                <div class="row owl-carousel owl-theme">
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div id="felul-section" class="mt-0 mb-4">
+                    <h2>Felul întâi</h2>
+                    <hr>
+                </div>
+                <div class="row owl-carousel owl-theme">
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div id="dejun-section" class="mt-0 mb-4">
+                    <h2>Micul dejun</h2>
+                    <hr>
+                </div>
+                <div class="row owl-carousel owl-theme">
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div id="salate-section" class="mt-0 mb-4">
+                    <h2>Salate</h2>
+                    <hr>
+                </div>
+                <div class="row owl-carousel owl-theme">
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div id="gustari-section" class="mt-0 mb-4">
+                    <h2>Gustari reci</h2>
+                    <hr>
+                </div>
+                <div class="row owl-carousel owl-theme">
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/2_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+
+                    <div class="col-auto mx-0">
+                        <div class="card mb-4 bg-dark">
+                            <div class="rounded m-0 p-0">
+                                <img class="rounded-top" height="320px" width="230px" src="Images/about_us/1_unsplash.jpg">
+                            </div>
+                            <div class="card-body p-3 my-2">
+                                <div class="card-text mx-2 my-0">
+                                    <h3 class="my-0">Denumire</h3>
+                                    <p class="my-0 mb-2">95.50 mdl</p>
+                                </div>
+                                <div class="justify-content-between align-items-center">
+                                    <div class="px-2 my-0">
+                                        <button class="btn btn-lg btn-outline-secondary d-flex" type="button">
+                                            <div><b>Precomanda</b></div>
+                                            <div><i class="px-3 fa fa-cart-arrow-down px-2" aria-hidden="true"></i></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!---<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>-->
+    <script src="public/js/main.js"></script>
+</body>
+</html>
