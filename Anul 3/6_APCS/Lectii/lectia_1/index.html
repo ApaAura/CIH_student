@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="userName"></h1>
+    <h1 id="utilizator"></h1>
+
+    <h3> </h3>
+    <p>
+        let - variabila locala <br>
+        var - variabila globala <br>
+        console.log(denumire) - afiseaza valoarea variabilei in consola <br>
+        console.log(typeof denumire) - afisaza tipul de date (number,string, object(array), function) <br>
+        <br>
+        <b>Declaratia constantei</b> <br>
+        <i> const API_URL="https://jsonplaceholder.typicode.com/users" </i>
+        <br>
+        <br>
+        <b>Exemplu </b> <br>
+        <i>
+        let userName="John" <br>
+        let email ="email@gmail.com" <br>
+
+        console.log(userName +" "+ email) <br>
+        console.log(`${userName} ${email}`) <br>
+        </i>
+        <br>
+        <b>Exemplu</b> <br>
+        <i>
+            let check=true <br>
+
+            console.log(check) <br>
+            document.write(check) <br>
+            window.alert(check) <br>
+        </i>
+        <br>
+        <b>Exemplu</b> <br>
+        <i>
+            let userName="John" <br>
+            let p="<p> un paragaraf <p>" <br>
+            
+            document.getElementById('userName').innerText=userName <br>
+            document.getElementById('userName').textContent=userName <br>
+            document.getElementById('userName').innerHTML=p <br>
+            let h1=document.getElementById('userName') <br>
+            console.log(h1) <br> <br>
+        </i>
+        null - nu a fost gasita variabila <br>
+       
+        pentru a evita tipul de date undefinied trebuie sa initializam variabila  <br>
+        <i>let password="" <br>
+             console.log(password) <br>
+        </i>
+        <br>
+        <b>Alert Promt Confirm</b> <br>
+        <i>
+            let a=alert("Salut JavaScript")  <b>undenified</b> <br> 
+            let b=confirm("Salut JavaScript") <b>true/false</b> <br>
+            let c=promt("Salut JavaScript") <b>string</b> <br>
+            <br>
+            console.log(a)<br>
+        </i>
+        <br>
+        <b>Exemplu</b> <br>
+        Pentru a evita concatinarea sirurilor trebuie convertite in Number <br>
+        <i>   
+            let y=promt("Numarul 1") <br>
+            let x=promt("Numarul 2") <br>
+            let y=Number(promt("Numarul 1"))<br>
+            <br>
+            console.log(y+x) <br>
+            console.log(Number(y)+Number(x)) <br>
+            console.log(parseInt(y)+parseFloat(x)) <br>
+        </i>
+        <br>
+    </p>
+    <script src="js/main.js"></script>
+</body>
+</html>
