@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+         margin: 0;
+        }
+        nav.main-nav {
+            display: flex;
+            background-color: black;
+        }
+        .main-nav>ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            list-style-type: none;
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .main-nav a {
+            display: block;
+            padding: 5px 15px;
+            line-height: 30px;
+            color: white;
+            text-decoration: none;
+        }
+        .main-nav a:hover {
+            text-decoration: underline;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-links {
+            list-style-type: none;
+            background-color: grey;
+            position: absolute;
+            padding: 0;
+            display: none;
+            box-shadow: 1px 1px 3px #d3d3d3;
+            top: 41px;
+            width: 95px; 
+        }
+        .dropdown-links a {
+            line-height: 20px;
+            font-size: .90rem;
+        }
+        .header-body {
+            height: 45vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(130, 201, 231);
+            gap: 30px;
+        }
+        .header-body * {
+            margin: 0;
+            padding: 0;
+        }
+        .header-body h1 {
+            color: #56869a;
+            text-shadow: 1px 1px 3px black;
+            font-variant: small-caps;
+            letter-spacing: 5px;
+            font-size: 2.25rem;
+        }
+        .header-body p{
+            text-shadow: 2px 2px 5px white;
+            font-size: 1.25rem;
+            padding: 150px;
+            padding-top: 0px;
+        }
+        .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="stil.css">
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Acasa</a></li>
+            <li><a href="#">Noutati</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-link">Categorii</a>
+                <ul class="dropdown-links">
+                    <li><a href="#">Economie</a></li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Cultura</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#" class="dropdown-link">Produse</a>
+                <ul class="dropdown-links">
+                    <li><a href="#">PC</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Leptop</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="header-body">
+        <h1>Aceasta este o pagina web</h1>
+        <p>Sequi aperiam doloribus nobis illum rem inventore unde aperiam. Cumque esse laudantium rerum exercitationem
+            nisi repudiandae. Facere ipsa qui ratione quaerat. Fugit quis natus illum est vel. Dignissimos culpa
+            dignissimos sunt amet velit. Rem saepe repellat iusto rerum repudiandae aliquid ut.</p>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
