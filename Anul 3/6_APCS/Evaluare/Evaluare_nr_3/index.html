@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Schimbă culoarea</button>
+
+    <p id="mouseoverParagraf">Mouseover event</p>
+
+    <input type="text" id="input">
+    <div id="text"></div>
+
+    <section id="section">
+        <p>section</p>
+    </section>
+
+    <div id="touch" style="width: 600px; height: 100px; background-color: black;"></div>
+
+    <p oncontextmenu="showContextMenu(event)">Click dreapta aici pentru meniu contextual</p>
+	
+	<!-- meniul contextual -->
+	<div id="context-menu" onmouseleave="hideContextMenu()">
+		<ul>
+			<li onclick="doAction('actiunea 1')">Insert</li>
+			<li onclick="doAction('actiunea 2')">Copy</li>
+			<li onclick="doAction('actiunea 3')">Delete</li>
+		</ul>
+	</div>
+
+    <div id="drag-element" onmousedown="dragElement(event)"  style="background-color: aquamarine; width: 250px; height: 100px;"></div>
+
+    <div>
+        <label for="nume">Nume:</label>
+        <input type="text" id="numeVal" oninput="afiseazaValoare()">
+    </div>
+
+    <div>
+        <label for="input">Introduceți un text:</label>
+        <input type="text" id="inputBlur" name="input" onblur="validateInput(event)">
+    </div>
+   
+    <div>
+        <label for="nume">Nume:</label>
+        <input type="text" id="numeChange" onchange="afiseazaNume()">
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
