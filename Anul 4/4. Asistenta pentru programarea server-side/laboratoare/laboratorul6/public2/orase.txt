@@ -1,1 +1,0 @@
-[{"name":"Cahul","population":100},{"name":"Comrat","population":200},{"name":"Hincesti","population":300}]
