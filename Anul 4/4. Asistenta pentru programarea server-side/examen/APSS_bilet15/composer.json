@@ -1,0 +1,19 @@
+{
+    "name": "aura/apss_bilet15",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Apareci Aura",
+            "email": "aurica.apareci@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^4.12",
+        "slim/psr7": "^1.6",
+        "illuminate/database": "^10.38"
+    }
+}
