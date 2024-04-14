@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+    <canvas id="GFG" 
+            width="500" 
+            height="250" ;>  
+      </canvas> 
+    <script> 
+        let g = document.getElementById("GFG"); 
+        let geeks = g.getContext("2d"); 
+        geeks.shadowBlur = 20; 
+        geeks.shadowColor = "yellow"; 
+        geeks.fillStyle = "red"; 
+        geeks.fillRect(30, 20, 100, 80); 
+    </script> 
+</body> 
+</html>

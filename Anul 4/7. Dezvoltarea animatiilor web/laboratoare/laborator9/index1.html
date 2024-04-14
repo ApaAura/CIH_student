@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html> 
+  
+<body> 
+    <canvas id="GFG" 
+            width="400" 
+            height="200" 
+            style="border:2px solid #d3d3d3;">  
+    </canvas> 
+    <script> 
+        let G = document.getElementById("GFG"); 
+        let geeks = G.getContext("2d"); 
+        let grd = geeks.createLinearGradient(0, 0, 200, 0); 
+        grd.addColorStop(0, "yellow"); 
+        grd.addColorStop(1, "grey"); 
+        geeks.fillStyle = grd; 
+        geeks.fillRect(50, 50, 300, 80); 
+    </script> 
+</body> 
+  
+</html>

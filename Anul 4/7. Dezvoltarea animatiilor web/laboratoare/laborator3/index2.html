@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+// Define the tree trunk (two quadratic Bezier curves)
+ctx.beginPath();
+ctx.moveTo(100, 500);
+ctx.quadraticCurveTo(80, 400, 150, 350);
+ctx.quadraticCurveTo(220, 300, 100, 200);
+ctx.strokeStyle = 'brown';
+ctx.lineWidth = 5;
+ctx.stroke();
+
+// Define the left tree branch (three cubic Bezier curves)
+ctx.beginPath();
+ctx.moveTo(80, 400);
+ctx.bezierCurveTo(50, 350, 20, 280, 50, 200);
+ctx.strokeStyle = 'green';
+ctx.lineWidth = 3;
+ctx.stroke();
+
+// Define the right tree branch (three cubic Bezier curves)
+ctx.beginPath();
+ctx.moveTo(150, 350);
+ctx.bezierCurveTo(180, 300, 220, 250, 180, 200);
+ctx.strokeStyle = 'green';
+ctx.lineWidth = 3;
+ctx.stroke();
+
+// Define the leaves (multiple small circles)
+for (var i = 0; i < 10; i++) {
+  ctx.beginPath();
+  ctx.arc(50 + 20 * Math.random(), 200 - 20 * Math.random(), 5, 0, 2 * Math.PI);
+  ctx.fillStyle = 'green';
+  ctx.fill();
+}
+
+for (var i = 0; i < 10; i++) {
+  ctx.beginPath();
+  ctx.arc(180 - 20 * Math.random(), 200 - 20 * Math.random(), 5, 0, 2 * Math.PI);
+  ctx.fillStyle = 'green';
+  ctx.fill();
+}
+
+    </script>
+</body>
+
+</html>

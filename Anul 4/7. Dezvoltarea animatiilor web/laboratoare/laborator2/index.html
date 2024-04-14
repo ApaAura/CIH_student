@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas> <br>
+    <canvas id="circle" width="200" height="100" style="border:1px solid #000000;"></canvas> <br>
+    <canvas id="text" width="200" height="100" style="border:1px solid #000000;"></canvas> <br>
+    <canvas id="grad" width="200" height="100" style="border:1px solid #000000;"></canvas> <br>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+
+        var c_circle = document.getElementById("circle");
+        var ctx_circle = c_circle.getContext("2d");
+        ctx_circle.beginPath();
+        ctx_circle.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx_circle.stroke();
+
+        var c_txt = document.getElementById("text");
+        var ctx_txt = c_txt.getContext("2d");
+        ctx_txt.font = "30px Arial";
+        ctx_txt.strokeText("Hello World", 10, 50);
+
+        var c_grad = document.getElementById("grad");
+        var ctx_grad = c_grad.getContext("2d");
+        var grd = ctx_grad.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+        ctx_grad.fillStyle = grd;
+        ctx_grad.fillRect(0, 0, 200, 100);
+
+    </script>
+</body>
+
+</html>

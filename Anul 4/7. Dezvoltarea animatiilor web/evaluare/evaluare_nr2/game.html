@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'roboto', sans-serif;
+            font-weight: 300;
+        }
+
+        h1 {
+            color: red;
+            padding-left: 20px;
+            padding-top: 6px;
+            position: absolute;
+            color: black;
+            z-index: 1;
+        }
+
+        p {
+            padding-left: 20px;
+            padding-top: 60px;
+            font-size: 0.8em;
+            font-family: sans-serif;
+            line-height: 1.2em;
+            position: absolute;
+            color: black;
+            z-index: 1;
+        }
+
+        .deathz {
+            font-weight: 700;
+            color: #800080;
+        }
+
+        .winz {
+            font-weight: 700;
+            color: #88E188;
+        }
+
+        canvas {
+            top: 0px;
+            left: 0px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="">
+        <h1>The dot</h1>
+
+        <p>Score: <span id="deathz" class="deathz"></span> — <span id="winz" class="winz"></span><br><br>Welcome on the
+            first version<br>of the dot. In this game, you<br>
+            just have to cross the road.<br>
+            Use ←↑↓→ keys to moove.<br>
+        </p>
+        <canvas id="canvas"></canvas>
+    </div>
+
+   
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

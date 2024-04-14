@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="1800" height="1600"></canvas>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        function drawLine(x1, y1, x2, y2) {
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 5;
+            ctx.stroke();
+
+        }
+
+        function animate() {
+            for (var i = 0; i < 100; i++) {
+                var x1 = Math.random() * canvas.width;
+                var y1 = Math.random() * canvas.height;
+                var x2 = Math.random() * canvas.width;
+                var y2 = Math.random() * canvas.height;
+                drawLine(x1, y1, x2, y2);
+
+            }
+        }
+            requestAnimationFrame(animate);
+            animate();
+    </script>
+</body>
+</html>

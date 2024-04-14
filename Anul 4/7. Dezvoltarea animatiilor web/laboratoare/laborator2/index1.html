@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canvas House</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    function drawBackground() {
+        ctx.fillStyle = '#87ceeb';
+        ctx.fillRect(0, 0, canvas.width, canvas.height * 3 / 4);
+        
+        ctx.beginPath();
+        ctx.arc(canvas.width * 7 / 8, canvas.height / 8, 50, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffd700';
+        ctx.fill();
+        
+        ctx.fillStyle = '#32cd32'; 
+        ctx.fillRect(0, canvas.height * 3 / 4, canvas.width, canvas.height / 4);
+    }
+    
+    function drawHouse() {
+        ctx.fillStyle = '#ffcc99'; 
+        ctx.fillRect(canvas.width / 4, canvas.height / 4, canvas.width / 2, canvas.height / 2);
+        
+        ctx.beginPath();
+        ctx.moveTo(canvas.width / 4, canvas.height / 4);
+        ctx.lineTo(canvas.width / 2, canvas.height / 8);
+        ctx.lineTo(canvas.width * 3 / 4, canvas.height / 4);
+        ctx.closePath();
+        ctx.fillStyle = '#cc6600'; 
+        ctx.fill();
+        
+        drawWindow(canvas.width / 3, canvas.height * 3 / 5);
+        drawWindow(canvas.width * 2 / 3, canvas.height * 3 / 5);
+        drawWindow(canvas.width / 3, canvas.height * 3 / 8);
+        drawWindow(canvas.width * 2 / 3, canvas.height * 3 / 8);
+        
+        drawDoor(canvas.width / 2 - 20, canvas.height * 3 / 4 - 60);
+    }
+    
+    // Draw window
+    function drawWindow(x, y) {
+        x-=110;
+        ctx.fillStyle = '#ffffff'; // White
+        ctx.fillRect(x, y, canvas.width / 8, canvas.height / 12);
+        ctx.strokeStyle = '#000000'; // Black
+        ctx.lineWidth = 2;
+        ctx.strokeRect(x, y, canvas.width / 8, canvas.height / 12);
+        
+        ctx.beginPath();
+        ctx.moveTo(x + canvas.width / 16, y);
+        ctx.lineTo(x + canvas.width / 16, y + canvas.height / 12);
+        ctx.moveTo(x, y + canvas.height / 24);
+        ctx.lineTo(x + canvas.width / 8, y + canvas.height / 24);
+        ctx.strokeStyle = '#000000'; // Black
+        ctx.lineWidth = 2;
+        ctx.stroke();
+    }
+    
+    function drawDoor(x, y) {
+        ctx.fillStyle = '#964b00'; 
+        ctx.fillRect(x, y-60, 90, 120);
+    }
+    
+    drawBackground();
+    drawHouse();
+</script>
+</body>
+</html>

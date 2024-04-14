@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="task1" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
+    <canvas id="task2" width="400" height="400" style="border:1px solid #d3d3d3; background-color: lightgray;"></canvas>
+
+    <script>
+        //const canvas = document.getElementById("task1");
+        //const ctx = canvas.getContext("2d");
+        //ctx.beginPath();
+        //ctx.moveTo(80, 50);
+        //ctx.bezierCurveTo(100, 100, 260, 140, 150, 40);
+        //ctx.stroke();
+
+        const canvas2 = document.getElementById("task2");
+        const ctx = canvas2.getContext("2d");
+        //ctx2.beginPath();
+        //ctx2.moveTo(30, 40);
+        //ctx2.bezierCurveTo(20, 90, 100, 100, 90, 120);
+        //ctx2.stroke();
+
+        // Draw trunk
+        ctx.beginPath();
+        //first point ox, oy
+        ctx.moveTo(80, 170);
+        ctx.bezierCurveTo(220, 230, 120, 150, 180, 400);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = '#8B4513';
+        ctx.stroke();
+        // Draw trunk
+        ctx.beginPath();
+        ctx.moveTo(280, 450);
+        ctx.bezierCurveTo(200, 300, 200, 200, 290, 170);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = '#8B4513';
+        ctx.stroke();
+
+        // Draw branches
+        ctx.beginPath();
+        ctx.moveTo(80, 250);
+        ctx.bezierCurveTo(60, 80, 110, 100, 130, 150);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#008000';
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(200, 200);
+        ctx.bezierCurveTo(140, 160, 260, 160, 200, 120);
+        ctx.lineWidth = 15;
+        ctx.strokeStyle = '#008000';
+        //ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(200, 200);
+        ctx.bezierCurveTo(160, 150, 240, 150, 200, 100);
+        ctx.lineWidth = 15;
+        ctx.strokeStyle = '#008000';
+        //ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(200, 200);
+        ctx.bezierCurveTo(170, 130, 230, 130, 200, 80);
+        ctx.lineWidth = 15;
+        ctx.strokeStyle = '#008000';
+        //ctx.stroke();
+
+    </script>
+</body>
+
+</html>

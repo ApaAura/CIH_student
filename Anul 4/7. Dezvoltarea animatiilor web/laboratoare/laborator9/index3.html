@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html> 
+  
+<body> 
+    <p>Image to use:</p> 
+    <img id="image" 
+         src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20210916184234/gfg3-300x300.png" 
+         alt="GeeksforGeeks logo" 
+         width="250" 
+         height="200"> 
+      
+    <p>Canvas to fill:</p> 
+    <canvas id="gfg" 
+            width="300" 
+            height="300" 
+            style="border:1px solid #d3d3d3; ">  
+    </canvas> 
+      
+    <p> 
+        <button onclick="gfg()"> 
+          Click to Try 
+          </button> 
+    </p> 
+    <script> 
+    function gfg() { 
+        let g = document.getElementById("gfg"); 
+        let geeks = g.getContext("2d"); 
+        let img = document.getElementById("image"); 
+        geeks.drawImage(img, 0, 0); 
+    } 
+    </script> 
+</body> 
+  
+</html>

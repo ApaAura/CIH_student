@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes moveBackAndForth {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  16.67% {
+    top: calc(100% - 100px);
+    left: calc(100% - 100px);
+  }
+  33.33% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: calc(100% - 100px);
+    left: calc(100% - 100px);
+  }
+  66.67% {
+    top: 0;
+    left: 0;
+  }
+  83.33% {
+    top: calc(100% - 100px);
+    left: calc(100% - 100px);
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+.element {
+  position: fixed;
+  border-radius:50%;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  animation: moveBackAndForth 12s linear infinite;
+}
+    </style>
+</head>
+<body>
+    <div class="element"></div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Circle Drawing</title> 
+</head> 
+<body> 
+    <canvas id="GFG" width="400" height="200" style="border:2px solid #d3d3d3;"></canvas> 
+    <script> 
+         
+        let g = document.getElementById("GFG"); 
+        let geeks = g.getContext("2d"); 
+        geeks.beginPath(); 
+        geeks.arc(200, 100, 50, 0, 2 * Math.PI); 
+        geeks.stroke(); 
+    </script> 
+</body> 
+</html> 

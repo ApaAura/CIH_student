@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab1</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <h2 class="my-3">Ex 1 Tabla de sah</h2>
+      <canvas id="sahCanvas" width="600" height="600"></canvas>
+    </div>
+    <div class="col-lg-6">
+      <h2 class="my-3">Ex 2 QR - code</h2>
+      <canvas id="qr" width="600" height="600"></canvas>
+    </div>
+  </div>
+</div>
+
+<script>
+  //Exercitiul 1
+    var canvas = document.getElementById('sahCanvas');
+    var context = canvas.getContext('2d');
+    var cellSize = 75;
+    var lightColor = '#f0d9b5';
+    var darkColor = '#b58863';
+
+    for (var row = 0; row < 8; row++) {
+        for (var col = 0; col < 8; col++) {
+            var x = col * cellSize;
+            var y = row * cellSize;
+            var color = (row + col) % 2 == 0 ? lightColor : darkColor;
+            context.fillStyle = color;
+            context.fillRect(x, y, cellSize, cellSize);
+        }
+    }
+
+    //Exercitiul 2
+    var qrCodeData = [
+    [1, 1, 0, 1, 0, 1, 1, 1, 1, 1],
+    [1, 0, 1, 0, 1, 1, 0, 1, 0, 1],
+    [0, 1, 1, 1, 0, 1, 1, 1, 0, 1],
+    [1, 1, 0, 0, 1, 1, 0, 1, 0, 1],
+    [0, 1, 0, 1, 0, 0, 1, 1, 1, 1],
+    [1, 0, 1, 0, 1, 0, 0, 1, 0, 0],
+    [1, 1, 0, 1, 1, 1, 1, 0, 1, 0],
+    [0, 1, 1, 0, 0, 0, 1, 1, 1, 1],
+    [1, 0, 0, 1, 1, 1, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    ];
+
+    var canvasQR = document.getElementById('qr');
+    var content = canvasQR.getContext('2d');
+    var cellSize = canvasQR.width / qrCodeData.length;
+    var qrCodeSize = qrCodeData.length;
+    for (var y = 0; y < qrCodeSize; y++) {
+        for (var x = 0; x < qrCodeSize; x++) {
+            if (qrCodeData[y][x] === 1) {
+              content.fillStyle = "#000";
+            } else {
+              content.fillStyle = "#fff";
+            }
+            content.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

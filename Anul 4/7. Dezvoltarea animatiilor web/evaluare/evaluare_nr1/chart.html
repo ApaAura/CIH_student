@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        img{
+            pointer-events: none;
+        }
+        </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 bg-white rounded">
+          <a class="navbar-brand space" href="#">
+            <img src="Images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            HTML Canvas
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <ul class="navbar-nav mr-auto space">
+            <li class="nav-item active"> <a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item active"> <a class="nav-link" href="animation.html">Animation</a></li>
+            <li class="nav-item active"> <a class="nav-link" href="chart.html">Chart</a></li>
+            <li class="nav-item active"> <a class="nav-link" href="#">Portofolio</a></li>
+            <li class="nav-item active"> <a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item active"> <a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+    <div class="container my-5 py-5">
+        <div id="chartContainer" style="height: 370px; width: 100%; position: relative;"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+          <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+              <p class="text-muted">&copy; 2024</p>
+            </div>
+  
+            <div class="col mb-3">
+            </div>
+  
+            <div class="col mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              </ul>
+            </div>
+  
+            <div class="col mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              </ul>
+            </div>
+  
+            <div class="col mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              </ul>
+            </div>
+          </footer>
+    
+    <script>
+        window.onload = function () {
+ 
+ var chart = new CanvasJS.Chart("chartContainer", {            
+     title:{
+         text: "Conditii meteorologice"              
+     },
+     axisY: {
+         suffix: " °C",
+         maximum: 40,
+         gridThickness: 0
+     },
+     toolTip:{
+         shared: true,
+         content: "{name} </br> <strong>Temperature: </strong> </br> Min: {y[0]} °C, Max: {y[1]} °C"
+     },
+     data: [{
+         type: "rangeSplineArea",
+         fillOpacity: 0.1,
+         color: "#91AAB1",
+         indexLabelFormatter: formatter,
+         dataPoints: [
+             { label: "Luni", y: [15, 26], name: "rainy" },
+             { label: "Marti", y: [15, 27], name: "rainy" },
+             { label: "Miercuri", y: [13, 27], name: "sunny" },
+             { label: "Joi", y: [14, 27], name: "sunny" },
+             { label: "Vineri", y: [15, 26], name: "cloudy" },
+             { label: "Sambata", y: [17, 26], name: "sunny" },
+             { label: "Duminica", y: [16, 27], name: "rainy" }
+         ]
+     }]
+ });
+ chart.render();
+  
+ var images = [];    
+  
+ addImages(chart);
+  
+ function addImages(chart) {
+     for(var i = 0; i < chart.data[0].dataPoints.length; i++){
+         var dpsName = chart.data[0].dataPoints[i].name;
+         if(dpsName == "cloudy"){
+             images.push($("<img>").attr("src", "https://canvasjs.com/wp-content/uploads/images/gallery/gallery-overview/cloudy.png"));
+         } else if(dpsName == "rainy"){
+         images.push($("<img>").attr("src", "https://canvasjs.com/wp-content/uploads/images/gallery/gallery-overview/rainy.png"));
+         } else if(dpsName == "sunny"){
+             images.push($("<img>").attr("src", "https://canvasjs.com/wp-content/uploads/images/gallery/gallery-overview/sunny.png"));
+         }
+  
+     images[i].attr("class", dpsName).appendTo($("#chartContainer>.canvasjs-chart-container"));
+     positionImage(images[i], i);
+     }
+ }
+  
+ function positionImage(image, index) {
+     var imageCenter = chart.axisX[0].convertValueToPixel(chart.data[0].dataPoints[index].x);
+     var imageTop =  chart.axisY[0].convertValueToPixel(chart.axisY[0].maximum);
+  
+     image.width("40px")
+     .css({ "left": imageCenter - 20 + "px",
+     "position": "absolute","top":imageTop + "px",
+     "position": "absolute"});
+ }
+  
+ $( window ).resize(function() {
+     var cloudyCounter = 0, rainyCounter = 0, sunnyCounter = 0;    
+     var imageCenter = 0;
+     for(var i=0;i<chart.data[0].dataPoints.length;i++) {
+         imageCenter = chart.axisX[0].convertValueToPixel(chart.data[0].dataPoints[i].x) - 20;
+         if(chart.data[0].dataPoints[i].name == "cloudy") {					
+             $(".cloudy").eq(cloudyCounter++).css({ "left": imageCenter});
+         } else if(chart.data[0].dataPoints[i].name == "rainy") {
+             $(".rainy").eq(rainyCounter++).css({ "left": imageCenter});  
+         } else if(chart.data[0].dataPoints[i].name == "sunny") {
+             $(".sunny").eq(sunnyCounter++).css({ "left": imageCenter});  
+         }                
+     }
+ });
+  
+ function formatter(e) { 
+     if(e.index === 0 && e.dataPoint.x === 0) {
+         return " Min " + e.dataPoint.y[e.index] + "°";
+     } else if(e.index == 1 && e.dataPoint.x === 0) {
+         return " Max " + e.dataPoint.y[e.index] + "°";
+     } else{
+         return e.dataPoint.y[e.index] + "°";
+     }
+ } 
+  
+ }                            
+    </script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>  
+    <script src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+</body>
+</html>

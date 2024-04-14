@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+    <canvas id="GFG" 
+            width="300" 
+            height="150;"> 
+    </canvas> 
+    <script> 
+        let g = document.getElementById("GFG"); 
+        let geeks = g.getContext("2d"); 
+        geeks.rotate(20 * Math.PI / 180); 
+        geeks.fillRect(100, 20, 100, 50); 
+    </script> 
+</body> 
+</html>

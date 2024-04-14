@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #crosswalk{
+        display: block;
+        background: #2b2b2b;
+    }
+    </style>
+</head>
+<canvas id="canvas" width="400" height="600" style="border:1px solid #000000;"></canvas>
+<canvas id="crosswalk" width="400" height="200"></canvas>
+
+<body>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'black';
+        ctx.fillRect(88, 350, 25, 220);
+
+        ctx.fillStyle = 'gray';
+        ctx.fillRect(50, 50, 100, 300);
+
+        ctx.fillStyle = 'red';
+        ctx.beginPath();
+        ctx.arc(100, 100, 30, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = 'yellow';
+        ctx.beginPath();
+        ctx.arc(100, 200, 30, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = 'green';
+        ctx.beginPath();
+        ctx.arc(100, 300, 30, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = 'white';
+        ctx.font = '20px Arial';
+        ctx.fillText('Semafor', 60, 25);
+
+        const canvas1 = document.getElementById('crosswalk');
+    const ctx1 = canvas1.getContext('2d');
+
+    ctx1.fillStyle = '#444';
+    ctx1.fillRect(0, 80, 400, 40);
+
+    ctx1.fillStyle = '#fff';
+    for (let i = 0; i < 10; i++) {
+        ctx1.fillRect(i * 40 + 10, 100, 20, 5);
+    }
+
+    
+    </script>
+</body>
+
+</html>

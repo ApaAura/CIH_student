@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 bg-white rounded">
+      <a class="navbar-brand space" href="#">
+        <img src="Images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        HTML Canvas
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <ul class="navbar-nav mr-auto space">
+        <li class="nav-item active"> <a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item active"> <a class="nav-link" href="animation.html">Animation</a></li>
+        <li class="nav-item active"> <a class="nav-link" href="chart.html">Chart</a></li>
+        <li class="nav-item active"> <a class="nav-link" href="#">Portofolio</a></li>
+        <li class="nav-item active"> <a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item active"> <a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div class="first-section">
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1 class="text-white">Dezvoltarea</h1>
+        <h1 class="text-black">animatiilor web.</h1>
+      </div>
+    </div>
+    
+    <article>
+      <div class="container">
+        <div class="row top">
+          <h5 class="text-center">
+            <b>What is HTML Canvas?</b>
+The HTML canvas element is used to draw graphics, on the fly, via JavaScript.
+The canvas element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+Canvas is supported by all major browsers.
+          </h5>
+        </div>
+      </div>
+      <div class="album py-5 ">
+        <h1 class="section-title">Subject to study</h1>
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="line" width="200" height="100" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+                  <p class="card-text">
+                  <pre>
+  var c = document.getElementById("line");
+  var ctx = c.getContext("2d");
+  ctx.moveTo(0, 0);
+  ctx.lineTo(200, 100);
+  ctx.stroke();
+                        </pre>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="circle" width="200" height="100" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+                  <pre>
+const canvas = document.getElementById("circle");
+const ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+ctx.fillStyle = "orange";
+ctx.fill();
+                  </pre>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="stroke" width="200" height="100" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+                  <pre>
+const c = document.getElementById("stroke");
+const ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20, 20);
+ctx.lineTo(20, 100);
+ctx.lineTo(70, 100);
+ctx.strokeStyle = "red";
+ctx.stroke();
+                  </pre>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="bezer" width="200" height="100" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+                  <pre>
+const canvas = document.getElementById("myCanvas)
+const ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(20, 20);
+ctx.bezierCurveTo(20, 100, 200, 100, 200, 20);
+ctx.stroke();
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="bird" width="400" height="300" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+                  <pre>Exercise BIRD</pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="grad" width="200" height="100" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+                  <pre>
+const c = document.getElementById("grad");
+const ctx = c.getContext("2d");
+const grd = ctx.createLinearGradient(0, 0, 200)
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="sahCanvas" width="200" height="100" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+<pre>
+var canvas = document.getElementById('sahCanvas');
+var context = canvas.getContext('2d');
+var cellSize = 25;
+var lightColor = '#f0d9b5';
+var darkColor = '#b58863';
+
+for (var row = 0; row < 8; row++) {
+  for (var col = 0; col < 8; col++) {
+    var x = col * cellSize;
+    var y = row * cellSize;
+    var color = (row + col) % 2 == 0 ? lightColor
+    context.fillStyle = color;
+    context.fillRect(x, y, cellSize, cellSize);
+  }
+}
+</pre>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="qr" width="200" height="100" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+<pre>
+var canvasQR = document.getElementById('qr');
+var content = canvasQR.getContext('2d');
+var cellSize = 8;
+var qrCodeSize = qrCodeData.length;
+  for (var y = 0; y < qrCodeSize; y++) {
+  for (var x = 0; x < qrCodeSize; x++) {
+    if (qrCodeData[y][x] === 1) {
+      content.fillStyle = "#000";
+    } else {
+      content.fillStyle = "#fff";
+    }
+      content.fillRect(x * cellSize, y )
+  }
+}
+</pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="patrat" width="200" height="100" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+                  <pre>
+const canvas7 = document.getElementById("patrat");
+const ctx7 = canvas7.getContext("2d");
+ctx7.beginPath();
+ctx7.lineWidth = "6";
+ctx7.strokeStyle = "red";
+ctx7.rect(5, 5, 290, 140);
+ctx7.stroke();
+ctx7.beginPath();
+ctx7.lineWidth = "4";
+ctx7.strokeStyle = "green";
+ctx7.rect(30, 30, 50, 50);
+ctx7.stroke();
+ctx7.beginPath();
+ctx7.lineWidth = "10";
+                  </pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="flower" width="400" height="200" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+                  <pre>Exercise FLOWER</pre>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-light">
+                <canvas id="house" width="400" height="350" class="bd-placeholder-img card-img-top" width="100%"
+                  height="225" style="border:1px solid #d3d3d3;"></canvas>
+                <div class="card-body">
+                  <pre>Exercise HOUSE</pre>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <footer>
+      <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+          <div class="col mb-3">
+            <p class="text-muted">&copy; 2024</p>
+          </div>
+
+          <div class="col mb-3">
+          </div>
+
+          <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+          </div>
+
+          <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+ 
+    <script src="js/elements.js"></script>
+    <script src="js/sah.js"></script>
+    <script src="js/bird.js"></script>
+    <script src="js/flowers.js"></script>
+    <script src="js/house.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

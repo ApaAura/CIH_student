@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script>
+      window.onload = function () {
+ 
+ var chart = new CanvasJS.Chart("chartContainer", {
+     animationEnabled: true,
+     exportEnabled: true,
+     theme: "light2",
+     title:{
+         text: "Produse lactate"
+     },
+     axisY: {
+         title: "% grasimi",
+         suffix: " %",
+         reversed: true
+     },
+     axisX2: {
+        title: "Pret/lei",
+         tickThickness: 0,
+         labelAngle: 0
+     },
+     data: [{
+         type: "column",
+         axisXType: "secondary",
+         yValueFormatString: "#,##0 %",
+           indexLabelFontSize: 16,
+         dataPoints: [
+             { y: 300, label: "Continental Shelf" },
+             { y: 3000, label: "Continental Slope" },
+             { y: 4000, label: "Continental Rise" },
+             { y: 6000, label: "Abyssal Plain", indexLabel: "\u2193 Deepest" },
+             { y: 4400, label: "Sea Mount" }
+         ]
+     }]
+ });
+ chart.render();
+  
+ }                          
+        </script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</body>
+</html>
