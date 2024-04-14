@@ -2,7 +2,7 @@
     return[
         'driver'=>'mysql',
         'host'=> 'localhost',    
-        'database'=> 'lab15',   
+        'database'=> 'eval_nr3',   
         'username'=> 'root',
         'password'=> '',
         'charset'=> 'utf8',
