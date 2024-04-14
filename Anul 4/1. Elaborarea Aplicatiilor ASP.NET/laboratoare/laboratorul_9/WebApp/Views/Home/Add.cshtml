@@ -1,0 +1,69 @@
+﻿@model Student
+@using (Html.BeginForm("Register", "home", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    <div class="pt-3">
+        <h1 class="text-center">Inregistrare student:</h1>
+        <div class="row justify-content-between">
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Nume)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Nume,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Nume, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Prenume)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Prenume,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Prenume, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Adresa)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Adresa,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Adresa, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Email)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Email,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Email, "" ,new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(model => model.DataNasterii)
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.DataNasterii, new { @class = "form-control", @id = "date-picker" })
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-calendar"></i>
+                    </span>
+                </div>
+                @Html.ValidationMessageFor(model => model.DataNasterii, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Sex)
+                <div class="input-group">
+                    @Html.DropDownListFor(a => a.Sex, (IEnumerable<SelectListItem>)ViewBag.GenderList, new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Sex, "", new { @class = "text-danger" }) 
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Media)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Media,  new { @class = "form-control", @type="number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Media, "" ,new { @class = "text-danger" })
+            </div>
+            <div class="my-3 col-lg-4">
+                <input class="btn btn-block btn-danger" type="submit" value="Inregistreaza">
+            </div>
+        </div>
+    </div>
+}
+<script>
+    $(function () {
+        $("#date-picker").datepicker();
+    });
+</script>

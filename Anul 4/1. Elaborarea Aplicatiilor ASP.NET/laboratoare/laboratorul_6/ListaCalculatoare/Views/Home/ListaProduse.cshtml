@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Lista Produse";
+}
+@model List<Produs>
+<!--
+<table class="table">
+     <thead>
+         <tr>
+             <th>Nume Produs</th>
+             <th>Categorie</th>
+             <th>Pret</th>
+         </tr>
+     </thead>
+     <tbody>
+        @foreach (var el in Model)
+        {
+            <tr>
+                <td>@el.Name</td>
+                <td>@el.Categorie</td>
+                <td>@el.Pret</td>
+            </tr>
+        }
+    </tbody>
+</table>
+-->
+<div class="row">
+    @foreach (var el in Model)
+    {
+        <div class="col-lg-4 col-md-6">
+            <div class="card my-2 shadow">
+                <img class="card-img-top img-card" src=@el.Img>
+                <div class="card-body">
+                    <h5 class="card-title">@el.Name</h5>
+                    <div class=" row">
+                        <p class="col-7">@el.Categorie</p>
+                        <p class="col-5">@el.Pret mdl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

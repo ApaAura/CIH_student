@@ -1,0 +1,63 @@
+﻿@model Student
+
+@using (Html.BeginForm("Update", "home", FormMethod.Post))
+{
+    <div class="pt-3">
+        <h1 class="text-center">Editare carte:</h1>
+        <div class="row justify-content-between">
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Nume)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.ID,  new { @class = "form-control d-none" , @content=$"{Model.ID}"})
+                    @Html.TextBoxFor(a => a.Nume,  new { @class = "form-control" , @content=$"{Model.Nume}"})
+                </div>
+                @Html.ValidationMessageFor(a => a.Nume, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Prenume)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Prenume,  new { @class = "form-control", @content=$"{Model.Prenume}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Prenume, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Adresa)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Adresa,  new { @class = "form-control", @content=$"{Model.Adresa}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Adresa, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Email)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Email,  new { @class = "form-control", @content=$"{Model.Email}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.DataNasterii)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.DataNasterii,  new { @class = "form-control", @content=$"{Model.DataNasterii}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.DataNasterii, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Sex)
+                <div class="input-group">
+                    @Html.DropDownListFor(a => a.Sex, (IEnumerable<SelectListItem>)ViewBag.GenderList, new { @class = "form-control", @content=$"{Model.Sex}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Sex, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-6 form-group">
+                @Html.LabelFor(a => a.Media)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Media,  new { @class = "form-control",@type="number", @content=$"{Model.Media}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Media, "", new { @class = "text-danger" })
+            </div>
+            <div class="my-3 col-lg-4">
+                <input class="btn btn-block btn-success" type="submit" value="Salveaza">
+            </div>
+        </div>
+    </div>
+}

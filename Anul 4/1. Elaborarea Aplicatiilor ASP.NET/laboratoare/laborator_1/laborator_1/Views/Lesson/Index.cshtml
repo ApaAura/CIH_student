@@ -1,0 +1,30 @@
+﻿@model List<laborator_1.Models.Lesson>
+
+<div class="container">
+    <h2>Orarul lectiilor:</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Curs</th>
+                <th>Profesor</th>
+                <th>Zi</th>
+                <th>Ora inceput</th>
+                <th>Ora de sfarsit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var lesson in Model)
+            {
+                <tr>
+                    <td>@lesson.Id</td>
+                    <td>@lesson.CourseName</td>
+                    <td>@lesson.Instructor</td>
+                    <td>@lesson.Day</td>
+                    <td>@lesson.StartTime</td>
+                    <td>@lesson.EndTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

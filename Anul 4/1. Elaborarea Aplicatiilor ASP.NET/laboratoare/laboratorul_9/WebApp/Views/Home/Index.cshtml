@@ -1,0 +1,88 @@
+﻿@model List<Student>
+<div class="container">
+    <h2>Lista Studentilor</h2>
+    <hr />
+    <div class="row">
+        <div class="col-lg-4 form-group">
+            @using (Html.BeginForm("SelectStudents", "Home", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <label for="criteria">Selectati criteriul:</label>
+                    <select name="selectedCriteria" id="criteria" class="form-control">
+                        <option value="all">Lista tuturor elevilor</option>
+                        <option value="failed">Lista elevilor restanțieri</option>
+                        <option value="gpa">Lista elevilor cu media mai mare ca 7.50</option>
+                        <option value="female">Lista fetelor</option>
+                        <option value="male_high_grade">Lista băieților cu note mai mari ca 8.00</option>
+                        <option value="age">Lista elevilor cu vârsta mai mare de 20 ani</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3 mb-3">Filtreaza</button>
+            }
+            @using (Html.BeginForm("FilterStudents", "Home", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <label for="criteria">Selectati criteriul pentru filtrare:</label>
+                    <select name="selectedCriteriaFoFilter" id="criteriaFilter" class="form-control">
+                        <option value="alp">A-Z</option>
+                        <option value="alpBack">Z-A</option>
+                        <option value="desc">Cea mai mare medie</option>
+                        <option value="cresc">Cea mai mica medie</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Filtreaza</button>
+            }
+        </div>
+        <div class="col-lg-8">
+            @if (!(Model.Count == 0))
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nume</th>
+                            <th>Prenume</th>
+                            <th>Adresa</th>
+                            <th>Email</th>
+                            <th>Data Nasterii</th>
+                            <th>Sex</th>
+                            <th>Media</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var student in Model)
+                        {
+                            <tr>
+                                <td>@student.Nume</td>
+                                <td>@student.Prenume</td>
+                                <td>@student.Adresa</td>
+                                <td>@student.Email</td>
+                                <td>
+                                    @if (student.DataNasterii.HasValue)
+                                    {
+                                        @student.DataNasterii.Value.ToString("yyyy/MM/dd")
+                                    }
+                                </td>
+                                <td>@student.Sex</td>
+                                <td>@student.Media</td>
+                                <td class="d-flex">
+                                    @Html.ActionLink("Edit","Edit","Home",new {@id = student.ID},new {@class="btn btn-block btn-primary mx-2"})
+                                    @using (Html.BeginForm("Delete", "Home", new { @id = student.ID }, FormMethod.Post))
+                                    {
+                                        <input class="btn btn-block btn-danger" type="submit" value="Delete">
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <h3>Nu sunt inregistrati studenti !</h3>
+            }
+
+        </div>
+        </div>
+    </div>
+    

@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Sir
+
+@using (Html.BeginForm("index", "home", FormMethod.Post))
+{
+    <div class="pt-3">
+        <h3 class="text-center">Determina numarul de vocale, consoane, cifre si semne speciale din sir</h3>
+        <div class="row">
+            @Html.LabelFor(a => a.sirCaractere)
+            <div class="input-group">
+                @Html.TextBoxFor(a => a.sirCaractere)
+            </div>
+            @Html.ValidationMessageFor(a => a.sirCaractere, "", new { @class = "text-danger" })
+        </div>
+        <br>
+
+        <div class="justify-content-between">
+            <input class="btn btn-block btn-danger" type="submit" value="Determina">
+        </div>
+    </div>
+}

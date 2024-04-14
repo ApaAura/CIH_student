@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Paralelipiped
+
+
+@using (Html.BeginForm("index", "home", FormMethod.Post))
+{
+    <div class="pt-3">
+        <h3 class="text-center">Calculeaza aria si volumul paralelipipedului</h3>
+        <p style="color: #5fbfcd;">Introduceti dimensiunile paralelipipedului:</p>
+        <div class="row">
+            <div class="col-lg-4 form-group">
+                @Html.LabelFor(a => a.a)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.a,new { @type = "number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.a, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-4 form-group">
+                @Html.LabelFor(a => a.b)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.b,new { @type = "number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.b, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-4 form-group">
+                @Html.LabelFor(a => a.c)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.c,new { @type = "number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.c, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br>
+
+        <div class="justify-content-between">
+            <input class="btn btn-block btn-danger" type="submit" value="Calculeaza">
+       </div>
+    </div>
+}

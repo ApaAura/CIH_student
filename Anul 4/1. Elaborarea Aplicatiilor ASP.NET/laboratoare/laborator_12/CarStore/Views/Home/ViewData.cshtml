@@ -1,0 +1,88 @@
+﻿@using CarStore.ViewModels;
+@model ViewDataViewModel
+
+<div class="container">
+    <h2>Lista automobilelor</h2>
+    @if (!(Model.Cars.Count == 0))
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Pret</th>
+                    <th>Capacitatea motorului</th>
+                    <th>Tipul combustibilului</th>
+                    <th>Transmisie</th>
+                    <th>Tip tractiune</th>
+                    <th>Nr usi</th>
+                    <th>Nr locuri</th>
+                    <th>Producator</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var car in Model.Cars)
+                {
+                    <tr>
+                        <td>@car.Model</td>
+                        <td>@car.Price</td>
+                        <td>@car.CapacitateaMotorului</td>
+                        <td>@car.TipulCombustibilului</td>
+                        <td>@car.Transmisie</td>
+                        <td>@car.TipTractiune</td>
+                        <td>@car.NumarUsi</td>
+                        <td>@car.NumarLocuri</td>
+                        <td>@car.Producer</td> <!--displays only id-->
+                        <td class="d-flex">
+                            @Html.ActionLink("Edit","UpdateCar","Home",new {@carId = car.ID},new {@class="btn btn-block btn-primary mx-2"})
+                            @using (Html.BeginForm("DeleteCar", "Home", new { @id = car.ID }, FormMethod.Post))
+                            {
+                                <input class="btn btn-block btn-danger" type="submit" value="Delete">
+                            }
+                        </td>
+                    </tr>
+                     }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h3>Nu sunt inregistrate automobile !</h3>
+    }
+
+    <h2>Lista producatorilor</h2>
+    @if (!(Model.Producers.Count == 0))
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cod producator</th>
+                    <th>Denumire</th>
+                    <th>Adresa producator</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var prod in Model.Producers)
+                {
+                    <tr>
+                        <td>@prod.ProdID</td>
+                        <td>@prod.Denumire</td>
+                        <td>@prod.Adresa</td>
+                        <td class="d-flex">
+                            @Html.ActionLink("Edit","UpdateProducer","Home",new {@producerId = prod.ProdID},new {@class="btn btn-block btn-primary mx-2"})
+                            @using (Html.BeginForm("DeleteProducer", "Home", new { @id = prod.ProdID }, FormMethod.Post))
+                            {
+                                <input class="btn btn-block btn-danger" type="submit" value="Delete">
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h3>Nu sunt inregistrati producatori !</h3>
+    }
+</div>

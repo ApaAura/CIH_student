@@ -1,0 +1,67 @@
+﻿@model Tuple<List<Student>, List<Student>>
+
+<div class="container row">
+    <div class="col-lg-6">
+        <h2>Lista Studentilor bursieri</h2>
+        @if (!(Model.Item1.Count == 0))
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nume</th>
+                        <th>Prenume</th>
+                        <th>Grupa</th>
+                        <th>Nota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.Item1)
+                    {
+                        <tr>
+                            <td>@student.Nume</td>
+                            <td>@student.Prenume</td>
+                            <td>@student.Grupa</td>
+                            <td>@student.Nota</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h3>Nu sunt studenti bursieri!</h3>
+        }
+    </div>
+    <div class="col-lg-6">
+        <h2>Lista Studentilor restantieri</h2>
+        @if (!(Model.Item2.Count == 0))
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nume</th>
+                        <th>Prenume</th>
+                        <th>Grupa</th>
+                        <th>Nota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.Item2)
+                    {
+                        <tr>
+                            <td>@student.Nume</td>
+                            <td>@student.Prenume</td>
+                            <td>@student.Grupa</td>
+                            <td>@student.Nota</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h3>Nu sunt studenti restantieri!</h3>
+        }
+    </div>
+
+</div>

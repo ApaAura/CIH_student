@@ -1,0 +1,42 @@
+﻿@model List<Book>
+<div class="container">
+    <h2>Lista cartilor</h2>
+    @if (!(Model.Count==0))
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Titlu</th>
+                    <th>Descriere</th>
+                    <th>Autor</th>
+                    <th>Editura</th>
+                    <th>Pret</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                        <td>@book.Description</td>
+                        <td>@book.Author</td>
+                        <td>@book.Editura</td>
+                        <td>@book.Price</td>
+                        <td class="d-flex">
+                            @Html.ActionLink("Edit","Edit","Home",new {@bookId = book.ID},new {@class="btn btn-block btn-primary mx-2"})
+                            @using (Html.BeginForm("Delete", "Home", new { @id = book.ID }, FormMethod.Post))
+                            {
+                                <input class="btn btn-block btn-danger" type="submit" value="Delete">
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h3>Nu sunt inregistrate carti !</h3>
+    }
+</div>

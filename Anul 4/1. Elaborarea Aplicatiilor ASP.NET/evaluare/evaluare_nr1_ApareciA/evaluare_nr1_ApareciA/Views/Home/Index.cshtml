@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Note
+
+@using (Html.BeginForm("index", "home", FormMethod.Post))
+{
+    <div class="pt-3">
+        <h1 class="text-center">Calculeaza-ti media de concurs intr-un<br> mod simplu si rapid</h1>
+        <p style="color: #5fbfcd;">Notele anuale la 4 discipline de profil:</p>
+        <div class="row">
+            <div class="col-lg-3 form-group">
+                @Html.LabelFor(a => a.LimbaInstruire)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.LimbaInstruire,new { @type = "number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.LimbaInstruire, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-3 form-group">
+                @Html.LabelFor(a => a.LimbaStraina)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.LimbaStraina,new { @type = "number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.LimbaStraina, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-3 form-group">
+                @Html.LabelFor(a => a.Matematica)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Matematica,new { @type = "number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Matematica, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-3 form-group">
+                @Html.LabelFor(a => a.Profil)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Profil,new { @type = "number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Profil, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br>
+        <p style="color: #5fbfcd;">Media notelor de la examenele de absolvire:</p>
+
+        <div class="row justify-content-between">
+            <div class="col-lg-4 form-group">
+                @Html.LabelFor(a => a.MNEA)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.MNEA,new { @type = "number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.MNEA, "", new { @class = "text-danger" })
+            </div>
+            <div class="my-3 col-lg-4">
+                <input class="btn btn-block btn-danger" type="submit" value="Calculeaza">
+            </div>
+       </div>
+    </div>
+}

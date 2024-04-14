@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Matrice bidimensionala";
+}
+<div class="align-content-md-center">
+    <h2>Matricea generata</h2>
+</div>
+<hr />
+@{
+    int[,] matrice = ViewBag.Matrice;
+    int maxValue = ViewBag.maxValue;
+    int minValue = ViewBag.minValue;
+    int sumFirstDiagonal = 0;
+    int sumSecondDiagonal = 0;
+
+}
+<table class="table">
+    @for (int i = 0; i < matrice.GetLength(0); i++)
+    {
+        <tr>
+            @for (int j = 0; j < matrice.GetLength(1); j++)
+            {
+                int value = matrice[i, j];
+                bool isMax = (value == maxValue);
+                bool isMin = (value == minValue);
+                <td class="@(isMax ? "max" : (isMin ? "min" : ""))">@value</td>
+            }
+        </tr>
+    }
+</table>
+<br />
+<table class="table">
+    @for (int i = 0; i < matrice.GetLength(0); i++)
+    {
+        <tr>
+            @for (int j = 0; j < matrice.GetLength(1); j++)
+            {
+                int value = matrice[i, j];
+                bool isDiagonala = (i == j);
+                bool isSecondDiagonal = (i == matrice.GetLength(0)-j-1);
+                <td class="@(isDiagonala ? "max" : (isSecondDiagonal ? "min" : ""))">@value</td>
+                @if (i==j)
+                {
+                    sumFirstDiagonal += matrice[i, j];
+                }
+                @if (i == matrice.GetLength(0) - j - 1)
+                {
+                    sumSecondDiagonal += matrice[i, j];
+                }
+            }
+        </tr>
+    }
+</table>
+<h3>Suma elementelor de pe diagonla principala : @sumFirstDiagonal</h3>
+<h3>Suma elementelor de pe diagonla secundara : @sumSecondDiagonal</h3>

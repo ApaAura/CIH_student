@@ -1,0 +1,42 @@
+﻿@model Employee
+
+@using (Html.BeginForm("Update", "home", FormMethod.Post))
+{
+    <div class="pt-3">
+        <h1 class="text-center">Editare angajat:</h1>
+        <div class="row justify-content-between">
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Nume)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.ID,  new { @class = "form-control d-none" , @content=$"{Model.ID}"})
+                    @Html.TextBoxFor(a => a.Nume,  new { @class = "form-control" , @content=$"{Model.Nume}"})
+                </div>
+                @Html.ValidationMessageFor(a => a.Nume, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Prenume)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Prenume,  new { @class = "form-control", @content=$"{Model.Prenume}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Prenume, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Post)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Post,  new { @class = "form-control", @content=$"{Model.Post}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Post, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Salariu)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Salariu,  new { @class = "form-control",@type="number", @content=$"{Model.Salariu}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Salariu, "", new { @class = "text-danger" })
+            </div>
+            <div class="my-3 col-lg-4">
+                <input class="btn btn-block btn-success" type="submit" value="Salveaza">
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,27 @@
+﻿@model Producer
+@using (Html.BeginForm("AddProducerPost", "home", FormMethod.Post))
+{
+    <div class="pt-3">
+        <h1 class="text-center">Inregistrare producator:</h1>
+        <div class="row justify-content-between">
+
+            <div class="col-lg-10 form-group">
+                @Html.LabelFor(a => a.Denumire)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Denumire,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Denumire, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-10 form-group">
+                @Html.LabelFor(a => a.Adresa)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Adresa,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Adresa, "", new { @class = "text-danger" })
+            </div>
+            <div class="my-3 col-lg-4">
+                <input class="btn btn-block btn-danger" type="submit" value="Inregistreaza">
+            </div>
+        </div>
+    </div>
+}

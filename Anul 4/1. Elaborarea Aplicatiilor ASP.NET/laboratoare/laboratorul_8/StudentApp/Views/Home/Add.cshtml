@@ -1,0 +1,40 @@
+﻿@model Student 
+@using (Html.BeginForm("Register", "home", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    <div class="pt-3">
+        <h1 class="text-center">Inregistrare student:</h1>
+        <div class="row justify-content-between">
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Nume)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Nume,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Nume, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Prenume)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Prenume,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Prenume, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Grupa)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Grupa,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Grupa, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Nota)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Nota,  new { @class = "form-control", @type="number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Nota, "" ,new { @class = "text-danger" })
+            </div>
+            <div class="my-3 col-lg-4">
+                <input class="btn btn-block btn-danger" type="submit" value="Inregistreaza">
+            </div>
+        </div>
+    </div>
+}

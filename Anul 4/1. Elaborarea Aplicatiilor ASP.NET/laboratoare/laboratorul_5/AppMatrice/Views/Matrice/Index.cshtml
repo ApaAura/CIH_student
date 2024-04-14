@@ -1,0 +1,18 @@
+﻿@{
+}
+<h2>Dimensiunile matricii</h2>
+@using (Html.BeginForm("GenerateMatrice", "Matrice", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Rows")
+        @Html.TextBox("rows", null, new{@class ="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.Label("Columns")
+        @Html.TextBox("columns", null, new{@class ="form-control"})
+    </div>
+    <br />
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Generare matrice</button>
+    </div>
+}

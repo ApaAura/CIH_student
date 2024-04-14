@@ -1,0 +1,70 @@
+﻿@model Car
+
+@using (Html.BeginForm("UpdateCar", "home", FormMethod.Post))
+{
+    <div class="pt-3">
+        <h1 class="text-center">Editare automobil
+        <div class="row justify-content-between">
+            <div class="col-lg-10 form-group">
+                @Html.LabelFor(a => a.Model)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.ID,  new { @class = "form-control d-none" , @content=$"{Model.ID}"})
+                        @Html.TextBoxFor(a => a.Model,  new { @class = "form-control" , @content=$"{Model.Model}"})
+                </div>
+                    @Html.ValidationMessageFor(a => a.Model, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-10 form-group">
+                @Html.LabelFor(a => a.Price)
+                <div class="input-group">
+                        @Html.TextBoxFor(a => a.Price,  new { @class = "form-control", @content=$"{Model.Price}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Price, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-10 form-group">
+                @Html.LabelFor(a => a.CapacitateaMotorului)
+                <div class="input-group">
+                        @Html.TextBoxFor(a => a.CapacitateaMotorului,  new { @class = "form-control", @content=$"{Model.CapacitateaMotorului}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.CapacitateaMotorului, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-10 form-group">
+                @Html.LabelFor(a => a.Transmisie)
+                <div class="input-group">
+                    @Html.DropDownListFor(a => a.Transmisie, (IEnumerable<SelectListItem>)ViewBag.TransmisionList, new { @class = "form-control", @content=$"{Model.Transmisie}" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Transmisie, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-10 form-group">
+                    @Html.LabelFor(a => a.TipTractiune)
+                <div class="input-group">
+                        @Html.DropDownListFor(a => a.TipTractiune, (IEnumerable<SelectListItem>)ViewBag.TractiuneList, new { @class = "form-control", @content=$"{Model.TipTractiune}" })
+                </div>
+                    @Html.ValidationMessageFor(a => a.TipTractiune, "", new { @class = "text-danger" })
+            </div>
+                <div class="col-lg-5 form-group">
+                    @Html.LabelFor(a => a.NumarUsi)
+                    <div class="input-group">
+                        @Html.TextBoxFor(a => a.NumarUsi,  new { @class = "form-control", @content=$"{Model.NumarUsi}" })
+                    </div>
+                    @Html.ValidationMessageFor(a => a.NumarUsi, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-lg-5 form-group">
+                    @Html.LabelFor(a => a.NumarLocuri)
+                    <div class="input-group">
+                        @Html.TextBoxFor(a => a.NumarLocuri,  new { @class = "form-control", @content=$"{Model.NumarLocuri}" })
+                    </div>
+                    @Html.ValidationMessageFor(a => a.NumarLocuri, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-lg-10 form-group">
+                    @Html.LabelFor(a => a.Producer)
+                    <div class="input-group">
+                        @Html.DropDownListFor(a => a.Producer, (IEnumerable<SelectListItem>)ViewBag.ProducerList, new { @class = "form-control", @content=$"{Model.Producer}" })
+                    </div>
+                    @Html.ValidationMessageFor(a => a.Producer, "", new { @class = "text-danger" })
+                </div>
+                <div class="my-3 col-lg-4">
+                    <input class="btn btn-block btn-success" type="submit" value="Salveaza">
+                </div>
+            </div>
+    </div>
+}

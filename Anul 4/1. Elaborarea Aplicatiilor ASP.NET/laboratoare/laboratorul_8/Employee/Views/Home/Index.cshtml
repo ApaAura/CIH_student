@@ -1,0 +1,53 @@
+﻿@model Tuple<List<Employee>, List<Employee>>
+<div class="container">
+    <h2>Lista Angajatilor</h2>
+    @if (!(Model.Item1.Count == 0))
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nume</th>
+                    <th>Prenume</th>
+                    <th>Post</th>
+                    <th>Salariu</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var angajat in Model.Item1)
+                {
+                    <tr>
+                        <td>@angajat.Nume</td>
+                        <td>@angajat.Prenume</td>
+                        <td>@angajat.Post</td>
+                        <td>@angajat.Salariu</td>
+                        <td class="d-flex">
+                            @Html.ActionLink("Edit","Edit","Home",new {@id = angajat.ID},new {@class="btn btn-block btn-primary mx-2"})
+                            @using (Html.BeginForm("Delete", "Home", new { @id = angajat.ID }, FormMethod.Post))
+                            {
+                                <input class="btn btn-block btn-danger" type="submit" value="Delete">
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h3>Nu sunt inregistrati angajati !</h3>
+    }
+</div>
+<div>
+    <br />
+    <p>În altă pagină web va fi afișat tabelul obținut din baza de date, sub care se va scrie Numele, Prenumele și salariul persoanei cu valoarea maximală.</p>
+    <p>
+        @foreach (var angajat in Model.Item2)
+        {
+           @angajat.Nume <br />
+           @angajat.Prenume <br />
+           @angajat.Post <br />
+           @angajat.Salariu <br /> <br />
+        }
+    </p>
+</div>

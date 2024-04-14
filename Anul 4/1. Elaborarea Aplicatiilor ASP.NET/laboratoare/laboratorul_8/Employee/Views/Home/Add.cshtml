@@ -1,0 +1,40 @@
+﻿@model Employee
+@using (Html.BeginForm("Register", "home", FormMethod.Post))
+{
+    <div class="pt-3">
+        <h1 class="text-center">Inregistrare angajat:</h1>
+        <div class="row justify-content-between">
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Nume)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Nume,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Nume, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Prenume)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Prenume,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Prenume, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Post)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Post,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Post, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Salariu)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Salariu,  new { @class = "form-control", @type="number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Salariu, "" ,new { @class = "text-danger" })
+            </div>
+            <div class="my-3 col-lg-4">
+                <input class="btn btn-block btn-danger" type="submit" value="Inregistreaza">
+            </div>
+        </div>
+    </div>
+}
