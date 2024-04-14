@@ -1,0 +1,38 @@
+﻿@model List<Student>
+<div class="container">
+   
+    <h2>Lista studentilor</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nume</th>
+                <th>Prenume</th>
+                <th>Email</th>
+                <th>Nr telefon</th>
+                <th>Adresa</th>
+                <th>IDNP</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.FirstName</td>
+                    <td>@student.LastName</td>
+                    <td>@student.Email</td>
+                    <td>@student.Phone</td>
+                    <td>@student.Adress</td>
+                    <td>@student.IDNP</td>
+                    <td class="d-flex">
+                        @Html.ActionLink("Edit","Edit","Home",new {@student = student.IDNP},new {@class="btn btn-block btn-primary mx-2"})
+                        @using (Html.BeginForm("Delete", "Home",new {@id = student.IDNP},FormMethod.Post))
+                        {
+                            <input class="btn btn-block btn-danger" type="submit" value="Delete">
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

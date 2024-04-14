@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Lectia 5";
+}
+<h2>@ViewBag.Title :Hello World! </h2>
+<hr />
+<h3>Exemplul 1: Afisare data calendaristica</h3>
+<p>Current Date @DateTime.Now.ToShortDateString()</p>
+<p>Current Day @DateTime.Now.DayOfWeek</p>
+<h3>Calcule</h3>
+<p>12+23=@(12+23)</p>
+<p>
+    @{
+        int sum = 0;
+        for (int i = 0; i < 25; i++)
+        { sum += i;}
+    }
+    Suma numerelor cuprinse intre 1 si 25: @sum
+</p>

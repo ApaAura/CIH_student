@@ -1,0 +1,55 @@
+﻿@model Student
+
+@using (Html.BeginForm("Register", "home", FormMethod.Post))
+{
+    <div class="pt-3">
+        <h1 class="text-center">Inregistrare elev:</h1>
+        <div class="row justify-content-between">
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.FirstName)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.FirstName,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.FirstName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.LastName)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.LastName,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.LastName, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Email)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Email,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Phone)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Phone,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Phone, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Adress)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Adress,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Adress, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.IDNP)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.IDNP,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.IDNP, "", new { @class = "text-danger" })
+            </div>
+            <div class="my-3 col-lg-4">
+                <input class="btn btn-block btn-danger" type="submit" value="Inregistreaza">
+            </div>
+        </div>
+    </div>
+}

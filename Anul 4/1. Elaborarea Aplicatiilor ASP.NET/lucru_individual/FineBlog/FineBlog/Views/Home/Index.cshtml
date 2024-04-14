@@ -1,0 +1,83 @@
+﻿@model BlogApp.ViewModels.HomeVM
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+
+@{
+    ViewData["Title"] = "Home Page";
+    string thumbnailUrl = "";
+    if(Model.ThumbnailUrl == "")
+    {
+        thumbnailUrl = "/blog/assets/img/home-bg.jpg";
+    }
+    else
+    {
+        thumbnailUrl = "/thumbnails/" + Model.ThumbnailUrl;
+    }
+}
+
+
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('@thumbnailUrl')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>@Model.Title</h1>
+                    <span class="subheading">@Model.ShortDescription</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="mx-4 row mb-5">
+        <div class="col">
+            <div class="" role="group">
+                @foreach (var category in Model.Categories)
+                {
+                    @Html.ActionLink($"{category}", "Index", "Home", new { @cat = $"{category}"},new { @class = "btn btn-secondary categoryButton"})
+                    <span></span>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container px-4 px-lg-5">
+      <div class="row">
+        @foreach (var post in Model.Posts!)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <a asp-controller="Blog" asp-action="Post" asp-route-slug="@post.Slug" >
+                        <img src="~/thumbnails/@post.ThumbnailUrl" class="card-img-top img-card1" alt="Post Image" style="height: 200px; object-fit:cover">
+                    </a>
+                    <div class="card-body">
+                        <h3>@post.Title</h3>
+                        <p class="card-text">@post.ShortDescription</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">@post.ApplicationUser!.FirstName @post.ApplicationUser!.LastName</small>
+                            <small class="text-muted"> @post.CreatedDate.ToShortDateString()</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+      </div>
+    <div class="d-flex justify-content-start mb-4">
+        @Html.PagedListPager(Model?.Posts, page => Url.Action("Index",
+        new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }),
+        new PagedListRenderOptions()
+        {
+        ContainerDivClasses = new List<string> { "pagination" },
+        UlElementClasses = new List<string> { "pagination" },
+        LiElementClasses = new List<string> { "page-item" },
+        PageClasses = new List<string> { "page-link" },
+        ActiveLiElementClass = "active",
+        })
+    </div>
+           
+</div>
+
+
