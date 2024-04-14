@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Book>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 form-group">
+            @using (Html.BeginForm("SelectBooks", "Home", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <label for="criteria">Selectati criteriul:</label>
+                    <select name="selectedCriteria" id="criteria" class="form-control">
+                        <option value="all">Lista tuturor elevilor</option>
+                        <option value="bilet9">Editor denumirea caruia se incepe si se termina cu o vocala</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3 mb-3">Filtreaza</button>
+            }
+        </div>
+        <div class="col-lg-8">
+            <h2>Lista cartilor</h2>
+            @if (!(Model.Count == 0))
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Titlu</th>
+                            <th>Autor</th>
+                            <th>Editor</th>
+                            <th>Pret</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var book in Model)
+                        {
+                            <tr>
+                                <td>@book.Title</td>
+                                <td>@book.Author</td>
+                                <td>@book.Editor</td>
+                                <td>@book.Price</td>
+                                <td class="d-flex">
+                                    @Html.ActionLink("Edit","Edit","Home",new {@bookId = book.ID},new {@class="btn btn-block btn-primary mx-2"})
+                                    @using (Html.BeginForm("Delete", "Home", new { @id = book.ID }, FormMethod.Post))
+                                    {
+                                        <input class="btn btn-block btn-danger" type="submit" value="Delete">
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <h3>Nu sunt inregistrate carti !</h3>
+            }
+        </div>
+    </div>
+</div>

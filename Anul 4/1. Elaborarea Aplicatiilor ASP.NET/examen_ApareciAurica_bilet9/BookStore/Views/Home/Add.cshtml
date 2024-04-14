@@ -1,0 +1,41 @@
+﻿@model Book
+
+@using (Html.BeginForm("Register", "home", FormMethod.Post ))
+{
+    <div class="pt-3">
+        <h1 class="text-center">Inregistrare carte:</h1>
+        <div class="row justify-content-between">
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Title)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Title,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Title, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Author)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Author,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Author, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Editor)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Editor,  new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Editor, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-lg-5 form-group">
+                @Html.LabelFor(a => a.Price)
+                <div class="input-group">
+                    @Html.TextBoxFor(a => a.Price,  new { @class = "form-control", @type="number" })
+                </div>
+                @Html.ValidationMessageFor(a => a.Price, "" ,new { @class = "text-danger" })
+            </div>
+            <div class="my-3 col-lg-4">
+                <input class="btn btn-block btn-danger" type="submit" value="Inregistreaza">
+            </div>
+        </div>
+    </div>
+}
