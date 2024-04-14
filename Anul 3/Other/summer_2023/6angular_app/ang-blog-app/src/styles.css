@@ -1,0 +1,48 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap-icons/';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --primary-color: #026467; /*fff1de*/
+    --secondary-color: #e5f5ea;/*ee8d5e*/
+    --body-text-color: #0c0d13;
+    --navbar-footer-color: #F9F9F9;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: var(--body-text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg-theme{
+    background-color: var(--primary-color);
+}
+.bg-secondary-theme{
+    background-color: var(--secondary-color);
+}
+.text-theme-primary{
+    color: var(--primary-color);
+}
+input[type = text], input[type = email]{
+    height: 40px;
+    padding-left: 20px;
+    font-size: 13px;
+    width: 100%;
+    border: none;
+    box-shadow: 0px 0px 33px -10px rgba(71, 114, 254, 0.3);
+}
+.btn-sub{
+    height: 48px;
+    width: 150px;
+    color: white;
+    border: none;
+    font-size: 13px;
+    background-color: var(--primary-color);
+}
+.shadow-card{
+    border: none;
+    box-shadow: 0px 0px 33px -10px rgba(71, 114, 254, 0.3);
+}
+

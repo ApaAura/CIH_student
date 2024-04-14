@@ -1,0 +1,60 @@
+.hero-section{
+    width: 96%;
+}
+.logo img{
+    width: 160px;
+}
+.menu ul li{
+    font-size: 18px;
+    font-weight: 500;
+}
+.hero-moon img{
+    width: 180px;
+    float: right;
+    margin-right: 10%;
+}
+.girl-section{
+    background-color: var(--primary-color);
+    border-radius: 15px;
+}
+.hero-image img{
+    width: 830px;
+}
+.sign-up-btn button{
+    width: 110px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+}
+.sign-up-btn{
+    float: right;
+}
+.text-moon{
+    margin-top: 250px;
+}
+.text h1{
+    font-size: 90px;
+    line-height: 80px;
+    font-weight: 700;
+}
+.text p{
+    line-height: 40px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.about-btn{
+    margin: 10px;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+}
+.try-btn{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+}
