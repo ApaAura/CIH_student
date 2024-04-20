@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen - bilet nr. 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid container">
+            <a class="navbar-brand" href="index.html">DAW</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link " aria-current="page" href="animation.html">Animation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <h3>Exemen Dezvoltarea Animatiilor web - bilet nr. 1</h3>
+
+        <p>Folosind elementul Canvas desenati un cerc, utilizand <i>functia arc()</i>. Linia de margine fiind de culoare
+            verde si culoare de umplere albastra</p>
+        <div class="row">
+            <div class="col-lg-8">
+                <canvas id="myCanvas" width="800" height="1100"></canvas>
+            </div>
+            <div class="col-lg-4">
+                <canvas id="myCanvas2" width="800" height="1100"></canvas>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        ctx.rect(10, 10, 700, 900);
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        ctx.beginPath();
+        var centerX = 10 + 600 / 2;
+        var centerY = 10 + 1000 / 2;
+        var radius = 200;
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        ctx.fillStyle = 'red';
+        ctx.fill();
+
+        ctx.beginPath();
+        var smallerRadius = 150;
+        ctx.arc(centerX, centerY, smallerRadius, 0, 2 * Math.PI);
+        ctx.strokeStyle = 'yellow';
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+        ctx.beginPath();
+        var innerRadius = 120;
+        ctx.arc(centerX, centerY, innerRadius, 0, 2 * Math.PI);
+        ctx.fillStyle = '#22b14c';
+        ctx.fill();
+
+        ctx.beginPath();
+        var x = centerX;
+        var y = centerY + innerRadius - 120;
+        var radiusX = 100;
+        var radiusY = 70;
+        ctx.ellipse(x, y, radiusX, radiusY, Math.PI / 2, 0, 2 * Math.PI);
+        ctx.fillStyle = '#FFC90E';
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 5;
+        ctx.fill();
+        ctx.stroke();
+
+        var canvas2 = document.getElementById("myCanvas2");
+        var ctx2 = canvas2.getContext("2d");
+        var centerX = canvas2.width / 2-150;
+        var centerY = canvas2.height / 2-200;
+        var radius = 50;
+
+        ctx2.beginPath();
+        ctx2.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+        ctx2.strokeStyle = "green"; 
+        ctx2.lineWidth = 5;
+        ctx2.stroke();
+        ctx2.fillStyle = "blue";
+        ctx2.fill();
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

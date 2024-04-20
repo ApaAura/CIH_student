@@ -1,0 +1,102 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        canvas {
+            background-color: #949E01;
+            margin-right: 0;
+            margin-left: 0;
+            position: relative;
+            top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid container">
+            <a class="navbar-brand" href="index.html">DAW</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link " aria-current="page" href="animation.html">Animation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <canvas id="canvas" width="160" height="144"></canvas>
+        <div style="margin-top: 220px;">
+            <p>Animatia consta in deplasarea unui pixel pe canvas.
+                Punctul de plecare al pixelului este în colțul din stânga sus al canvasului, iar acesta se deplasează orizontal spre dreapta cu o viteză constantă (dx = 2) și vertical cu o viteză de zero (dy = 0).
+                Când pixelul atinge marginea din dreapta a canvasului, se deplasează în jos cu două unități de la poziția sa curentă și își schimbă direcția orizontală, astfel încât să se deplaseze spre stânga (dx = -2).
+                Când ajunge în partea de jos a canvasului, pixelul se deplasează în sus până la marginea de sus a canvasului și își schimbă direcția verticală pentru a continua în jos.
+                În cele din urmă, când pixelul ajunge în colțul din stânga sus al canvasului, un mesaj "hey" este afișat în consolă.
+        </div>
+    </div>
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        x = 0;
+        y = 0;
+        lw = 2;
+
+        dx = 2;
+        dy = 0;
+
+        function drawPixel() {
+
+            pixel();
+            x += dx;
+            y += dy;
+
+            if (x > canvas.width - lw) {
+                x = canvas.width - dx;
+                y += 2;
+            }
+
+            if (y > canvas.height) {
+                y = canvas.height - lw;
+                x = canvas.width;
+                dx = -2;
+            }
+
+            if (y < canvas.height && x < 0) {
+                x = 0;
+                dy = -2;
+            }
+
+            if (x < 0 && y < 0) {
+                console.log('hey')
+            }
+
+            requestAnimationFrame(drawPixel);
+        }
+
+        function pixel() {
+            ctx.beginPath();
+            ctx.rect(x, y, lw, lw);
+            ctx.strokeStyle = "#000";
+            ctx.stroke();
+            ctx.closePath();
+        }
+
+        requestAnimationFrame(drawPixel);
+    </script>
+</body>
+
+</html>
